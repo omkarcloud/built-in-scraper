@@ -1,0 +1,10 @@
+services:
+  built-in-scraper:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      # Optional — builtin.com does not rate-limit at normal volume, so leave this unset.
+      # - BUILT_IN_PROXY=http://user:pass@host:port

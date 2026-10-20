@@ -1,0 +1,29 @@
+"""Start the Built In Scraper API.
+
+    python run.py            # http://localhost:8000
+    PORT=9000 python run.py  # another port
+
+Then:  curl "http://localhost:8000/jobs/details?job=https://builtin.com/job/software-engineer-l5-traffic-engineering/11527168"
+"""
+import bottle
+from cheroot import wsgi
+
+import config
+import routes  # noqa: F401  (mounts the routes on bottle's default app)
+
+EXAMPLE = "/jobs/details?job=https://builtin.com/job/software-engineer-l5-traffic-engineering/11527168"
+
+
+def main():
+    app = bottle.default_app()
+    print(f"Built In Scraper listening on http://localhost:{config.PORT}/")
+    print(f"Try:  curl \"http://localhost:{config.PORT}{EXAMPLE}\"")
+    server = wsgi.Server(("0.0.0.0", config.PORT), app, server_name="built-in-scraper", numthreads=16)
+    try:
+        server.start()
+    except KeyboardInterrupt:
+        server.stop()
+
+
+if __name__ == "__main__":
+    main()

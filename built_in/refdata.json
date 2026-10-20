@@ -1,0 +1,4198 @@
+{
+ "captured_at": "2026-10-19",
+ "categories": [
+  {
+   "id": 5,
+   "alias": "ai-machine-learning",
+   "name": "AI & Machine Learning",
+   "subcategories": [
+    {
+     "id": 39,
+     "alias": "ai-engineering",
+     "name": "AI Engineering"
+    },
+    {
+     "id": 40,
+     "alias": "ai-research",
+     "name": "AI Research"
+    },
+    {
+     "id": 41,
+     "alias": "machine-learning-engineering",
+     "name": "Machine Learning Engineering"
+    },
+    {
+     "id": 42,
+     "alias": "data-science",
+     "name": "Data Science"
+    },
+    {
+     "id": 43,
+     "alias": "ml-ops",
+     "name": "ML Ops"
+    },
+    {
+     "id": 44,
+     "alias": "generative-artificial-intelligence",
+     "name": "Generative AI"
+    },
+    {
+     "id": 45,
+     "alias": "computer-vision-ai",
+     "name": "Computer Vision"
+    },
+    {
+     "id": 46,
+     "alias": "nlp",
+     "name": "Natural Language Processing (NLP)"
+    },
+    {
+     "id": 47,
+     "alias": "deep-learning",
+     "name": "Deep Learning"
+    },
+    {
+     "id": 48,
+     "alias": "responsible-ai-ethics",
+     "name": "Responsible AI / AI Ethics"
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "alias": "consultant",
+   "name": "Consulting",
+   "subcategories": [
+    {
+     "id": 20,
+     "alias": "strategy-consulting",
+     "name": "Strategy Consulting"
+    },
+    {
+     "id": 21,
+     "alias": "technology-consulting",
+     "name": "Technology Consulting"
+    },
+    {
+     "id": 22,
+     "alias": "business-consulting",
+     "name": "Business Consulting"
+    },
+    {
+     "id": 23,
+     "alias": "management-consulting",
+     "name": "Management Consulting"
+    },
+    {
+     "id": 214,
+     "alias": "digital-transformation-consulting",
+     "name": "Digital Transformation Consulting"
+    },
+    {
+     "id": 215,
+     "alias": "erp-enterprise-systems-consulting",
+     "name": "ERP / Enterprise Systems Consulting"
+    },
+    {
+     "id": 216,
+     "alias": "financial-consulting",
+     "name": "Financial Consulting"
+    },
+    {
+     "id": 217,
+     "alias": "operations-consulting",
+     "name": "Operations Consulting"
+    },
+    {
+     "id": 218,
+     "alias": "tax-consulting",
+     "name": "Tax Consulting"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "alias": "customer-success-experience",
+   "name": "Customer Success & Experience",
+   "subcategories": [
+    {
+     "id": 24,
+     "alias": "customer-success-management",
+     "name": "Customer Success Management (CSM)"
+    },
+    {
+     "id": 25,
+     "alias": "customer-onboarding",
+     "name": "Customer Onboarding"
+    },
+    {
+     "id": 26,
+     "alias": "support-operations",
+     "name": "Support Operations"
+    },
+    {
+     "id": 27,
+     "alias": "technical-account-management",
+     "name": "Technical Account Management"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "alias": "cyber-security",
+   "name": "Cybersecurity",
+   "subcategories": [
+    {
+     "id": 28,
+     "alias": "cybersecurity-engineering",
+     "name": "Cybersecurity Engineering"
+    },
+    {
+     "id": 29,
+     "alias": "security-operations",
+     "name": "Security Operations"
+    },
+    {
+     "id": 30,
+     "alias": "threat-intelligence",
+     "name": "Threat Intelligence"
+    },
+    {
+     "id": 31,
+     "alias": "risk-compliance",
+     "name": "Risk & Compliance"
+    },
+    {
+     "id": 32,
+     "alias": "application-security",
+     "name": "Application Security"
+    },
+    {
+     "id": 33,
+     "alias": "cloud-security",
+     "name": "Cloud Security"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "alias": "data-analytics",
+   "name": "Data & Analytics",
+   "subcategories": [
+    {
+     "id": 34,
+     "alias": "data-analysis",
+     "name": "Data Analysis"
+    },
+    {
+     "id": 35,
+     "alias": "data-engineering",
+     "name": "Data Engineering"
+    },
+    {
+     "id": 36,
+     "alias": "business-intelligence",
+     "name": "Business Intelligence (BI)"
+    },
+    {
+     "id": 37,
+     "alias": "data-governance",
+     "name": "Data Governance"
+    },
+    {
+     "id": 38,
+     "alias": "reporting-insights",
+     "name": "Reporting & Insights"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "alias": "designer",
+   "name": "Design",
+   "subcategories": [
+    {
+     "id": 49,
+     "alias": "ux-design",
+     "name": "UX Design"
+    },
+    {
+     "id": 50,
+     "alias": "ui-design",
+     "name": "UI Design"
+    },
+    {
+     "id": 51,
+     "alias": "product-design",
+     "name": "Product Design"
+    },
+    {
+     "id": 52,
+     "alias": "ux-research",
+     "name": "UX Research"
+    },
+    {
+     "id": 53,
+     "alias": "design-systems",
+     "name": "Design Systems"
+    },
+    {
+     "id": 219,
+     "alias": "user-researcher",
+     "name": "User Researcher"
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "alias": "engineering",
+   "name": "Engineering",
+   "subcategories": [
+    {
+     "id": 58,
+     "alias": "software-engineering",
+     "name": "Software Engineering"
+    },
+    {
+     "id": 59,
+     "alias": "devops-platform-engineering",
+     "name": "DevOps / Platform Engineering"
+    },
+    {
+     "id": 60,
+     "alias": "qa-test-engineering",
+     "name": "QA / Test Engineering"
+    },
+    {
+     "id": 61,
+     "alias": "embedded-systems-engineering",
+     "name": "Embedded Systems Engineering"
+    },
+    {
+     "id": 62,
+     "alias": "hardware-engineering",
+     "name": "Hardware Engineering"
+    },
+    {
+     "id": 63,
+     "alias": "electrical-engineering",
+     "name": "Electrical Engineering"
+    },
+    {
+     "id": 64,
+     "alias": "robotics-engineering",
+     "name": "Robotics Engineering"
+    },
+    {
+     "id": 65,
+     "alias": "firmware-engineering",
+     "name": "Firmware Engineering"
+    },
+    {
+     "id": 66,
+     "alias": "security-engineering",
+     "name": "Security Engineering"
+    },
+    {
+     "id": 67,
+     "alias": "systems-engineering",
+     "name": "Systems Engineering"
+    },
+    {
+     "id": 220,
+     "alias": "aerospace-engineering",
+     "name": "Aerospace Engineering"
+    },
+    {
+     "id": 221,
+     "alias": "automation-controls-engineering",
+     "name": "Automation & Controls Engineering"
+    },
+    {
+     "id": 222,
+     "alias": "mechatronics-engineering",
+     "name": "Mechatronics Engineering"
+    },
+    {
+     "id": 223,
+     "alias": "process-engineering",
+     "name": "Process Engineering"
+    },
+    {
+     "id": 224,
+     "alias": "industrial-engineering",
+     "name": "Industrial Engineering"
+    },
+    {
+     "id": 225,
+     "alias": "manufacturing-engineering",
+     "name": "Manufacturing Engineering"
+    },
+    {
+     "id": 226,
+     "alias": "semiconductor-design",
+     "name": "Semiconductor Design"
+    },
+    {
+     "id": 227,
+     "alias": "tool-engineering",
+     "name": "Tool Engineering"
+    },
+    {
+     "id": 228,
+     "alias": "mechanical-engineering",
+     "name": "Mechanical Engineering"
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "alias": "finance",
+   "name": "Finance",
+   "subcategories": [
+    {
+     "id": 68,
+     "alias": "financial-planning-analysis",
+     "name": "Financial Planning & Analysis (FP&A)"
+    },
+    {
+     "id": 69,
+     "alias": "accounting",
+     "name": "Accounting"
+    },
+    {
+     "id": 70,
+     "alias": "corporate-finance",
+     "name": "Corporate Finance"
+    },
+    {
+     "id": 71,
+     "alias": "audit-compliance",
+     "name": "Audit & Compliance"
+    },
+    {
+     "id": 229,
+     "alias": "regulatory-finance",
+     "name": "Regulatory Finance"
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "alias": "hr-recruiting",
+   "name": "HR & Recruiting",
+   "subcategories": [
+    {
+     "id": 77,
+     "alias": "talent-acquisition",
+     "name": "Talent Acquisition"
+    },
+    {
+     "id": 78,
+     "alias": "hr-business-partner",
+     "name": "HR Business Partner"
+    },
+    {
+     "id": 79,
+     "alias": "people-operations",
+     "name": "People Operations"
+    },
+    {
+     "id": 80,
+     "alias": "learning-development",
+     "name": "Learning & Development"
+    },
+    {
+     "id": 81,
+     "alias": "compensation-benefits",
+     "name": "Compensation & Benefits"
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "alias": "legal",
+   "name": "Legal",
+   "subcategories": [
+    {
+     "id": 82,
+     "alias": "government-regulatory-law",
+     "name": "Government & Regulatory Law"
+    },
+    {
+     "id": 83,
+     "alias": "contract-law",
+     "name": "Contract Law"
+    },
+    {
+     "id": 84,
+     "alias": "employment-law",
+     "name": "Employment Law"
+    },
+    {
+     "id": 85,
+     "alias": "corporate-law",
+     "name": "Corporate Law"
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "alias": "marketing",
+   "name": "Marketing",
+   "subcategories": [
+    {
+     "id": 93,
+     "alias": "product-marketing",
+     "name": "Product Marketing"
+    },
+    {
+     "id": 94,
+     "alias": "content-marketing",
+     "name": "Content Marketing"
+    },
+    {
+     "id": 95,
+     "alias": "content-strategy",
+     "name": "Content Strategy"
+    },
+    {
+     "id": 96,
+     "alias": "content-writing-editing",
+     "name": "Content Writing & Editing"
+    },
+    {
+     "id": 97,
+     "alias": "seo-organic-growth",
+     "name": "SEO & Organic Growth"
+    },
+    {
+     "id": 98,
+     "alias": "growth-marketing",
+     "name": "Growth Marketing"
+    },
+    {
+     "id": 99,
+     "alias": "brand-strategy",
+     "name": "Brand Strategy"
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "alias": "operations-support",
+   "name": "Operations & Support",
+   "subcategories": [
+    {
+     "id": 100,
+     "alias": "business-operations",
+     "name": "Business Operations"
+    },
+    {
+     "id": 101,
+     "alias": "customer-support",
+     "name": "Customer Support"
+    },
+    {
+     "id": 103,
+     "alias": "revenue-operations",
+     "name": "Revenue Operations"
+    },
+    {
+     "id": 104,
+     "alias": "it-support-helpdesk",
+     "name": "IT Support & Helpdesk"
+    },
+    {
+     "id": 105,
+     "alias": "office-management",
+     "name": "Office Management"
+    },
+    {
+     "id": 106,
+     "alias": "strategic-operations",
+     "name": "Strategic Operations"
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "alias": "product-management",
+   "name": "Product Management",
+   "subcategories": [
+    {
+     "id": 127,
+     "alias": "product-manager",
+     "name": "Product Manager"
+    },
+    {
+     "id": 128,
+     "alias": "product-leadership",
+     "name": "Product Leadership"
+    },
+    {
+     "id": 129,
+     "alias": "product-analysis-insights",
+     "name": "Product Analysis & Insights"
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "alias": "program-project-management",
+   "name": "Program & Project Management",
+   "subcategories": [
+    {
+     "id": 111,
+     "alias": "technical-program-management",
+     "name": "Technical Program Management"
+    },
+    {
+     "id": 112,
+     "alias": "project-management",
+     "name": "Project Management"
+    },
+    {
+     "id": 113,
+     "alias": "portfolio-management",
+     "name": "Portfolio Management"
+    },
+    {
+     "id": 114,
+     "alias": "agile-coaching",
+     "name": "Agile Coaching"
+    },
+    {
+     "id": 115,
+     "alias": "pmo-leadership",
+     "name": "PMO Leadership"
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "alias": "sales",
+   "name": "Sales",
+   "subcategories": [
+    {
+     "id": 121,
+     "alias": "account-executive",
+     "name": "Account Executive"
+    },
+    {
+     "id": 122,
+     "alias": "account-management",
+     "name": "Account Management"
+    },
+    {
+     "id": 123,
+     "alias": "leadership",
+     "name": "Leadership"
+    },
+    {
+     "id": 124,
+     "alias": "sales-operations",
+     "name": "Sales Operations"
+    },
+    {
+     "id": 125,
+     "alias": "sales-development",
+     "name": "Sales Development"
+    },
+    {
+     "id": 126,
+     "alias": "sales-engineer",
+     "name": "Sales Engineer"
+    }
+   ]
+  },
+  {
+   "id": 130,
+   "alias": "supply-chain-procurement",
+   "name": "Supply Chain & Procurement",
+   "subcategories": [
+    {
+     "id": 144,
+     "alias": "supply-chain-management",
+     "name": "Supply Chain Management"
+    },
+    {
+     "id": 145,
+     "alias": "procurement-strategic-sourcing",
+     "name": "Procurement + Strategic Sourcing"
+    },
+    {
+     "id": 146,
+     "alias": "vendor-management",
+     "name": "Vendor Management"
+    },
+    {
+     "id": 147,
+     "alias": "demand-planning",
+     "name": "Demand Planning"
+    },
+    {
+     "id": 148,
+     "alias": "inventory-optimization",
+     "name": "Inventory Optimization"
+    },
+    {
+     "id": 149,
+     "alias": "logistics",
+     "name": "Logistics"
+    },
+    {
+     "id": 230,
+     "alias": "buying-and-category-management",
+     "name": "Buying & Category Management"
+    },
+    {
+     "id": 231,
+     "alias": "merchandise-planning",
+     "name": "Merchandise Planning"
+    }
+   ]
+  }
+ ],
+ "experiences": [
+  {
+   "id": 1,
+   "alias": "internship",
+   "name": "Internship",
+   "filter_value": "Internship"
+  },
+  {
+   "id": 2,
+   "alias": "entry-level",
+   "name": "Entry Level (0-1 Years)",
+   "filter_value": "Entry-level"
+  },
+  {
+   "id": 3,
+   "alias": "junior",
+   "name": "Junior (1-2 Years)",
+   "filter_value": "Junior"
+  },
+  {
+   "id": 4,
+   "alias": "mid-level",
+   "name": "Mid Level (2-5 Years)",
+   "filter_value": "Mid-level"
+  },
+  {
+   "id": 5,
+   "alias": "senior",
+   "name": "Senior Level (5-9 Years)",
+   "filter_value": "Senior-level"
+  },
+  {
+   "id": 6,
+   "alias": "expert-leader",
+   "name": "Expert/Leader (9+ Years)",
+   "filter_value": "Expert/Leader"
+  },
+  {
+   "id": 7,
+   "alias": "not-specified",
+   "name": "Not Specified",
+   "filter_value": "Not Specified"
+  }
+ ],
+ "work_modes": [
+  {
+   "id": 2,
+   "alias": "remote",
+   "name": "Fully Remote"
+  },
+  {
+   "id": 3,
+   "alias": "hybrid",
+   "name": "Hybrid"
+  },
+  {
+   "id": 1,
+   "alias": "office",
+   "name": "On Site"
+  }
+ ],
+ "company_sizes": [
+  {
+   "id": 1,
+   "alias": "1-10",
+   "name": "1-10 Employees"
+  },
+  {
+   "id": 2,
+   "alias": "11-50",
+   "name": "11-50 Employees"
+  },
+  {
+   "id": 3,
+   "alias": "51-200",
+   "name": "51-200 Employees"
+  },
+  {
+   "id": 4,
+   "alias": "201-500",
+   "name": "201-500 Employees"
+  },
+  {
+   "id": 5,
+   "alias": "501-1000",
+   "name": "501-1000 Employees"
+  },
+  {
+   "id": 6,
+   "alias": "1000",
+   "name": "1000+ Employees"
+  }
+ ],
+ "posted_within": [
+  {
+   "days": 1,
+   "alias": "24-hr",
+   "name": "Past 24 hours"
+  },
+  {
+   "days": 3,
+   "alias": "3-day",
+   "name": "Past 3 days"
+  },
+  {
+   "days": 7,
+   "alias": "week",
+   "name": "Past week"
+  },
+  {
+   "days": 30,
+   "alias": "month",
+   "name": "Past month"
+  }
+ ],
+ "search_areas": [
+  {
+   "miles": 5,
+   "alias": "5mi",
+   "name": "Within 5 miles"
+  },
+  {
+   "miles": 10,
+   "alias": "10mi",
+   "name": "Within 10 miles"
+  },
+  {
+   "miles": 25,
+   "alias": "25mi",
+   "name": "Within 25 miles"
+  },
+  {
+   "miles": 50,
+   "alias": "50mi",
+   "name": "Within 50 miles"
+  },
+  {
+   "miles": 100,
+   "alias": "100mi",
+   "name": "Within 100 miles"
+  }
+ ],
+ "industries": [
+  {
+   "id": 159,
+   "alias": "3d-printing",
+   "name": "3D Printing"
+  },
+  {
+   "id": 423,
+   "alias": "3pl-third-party-logistics",
+   "name": "3PL: Third Party Logistics"
+  },
+  {
+   "id": 160,
+   "alias": "adtech",
+   "name": "AdTech"
+  },
+  {
+   "id": 161,
+   "alias": "aerospace",
+   "name": "Aerospace"
+  },
+  {
+   "id": 162,
+   "alias": "agency",
+   "name": "Agency"
+  },
+  {
+   "id": 419,
+   "alias": "agriculture",
+   "name": "Agriculture"
+  },
+  {
+   "id": 371,
+   "alias": "analytics-industry",
+   "name": "Analytics"
+  },
+  {
+   "id": 163,
+   "alias": "angel-vcfirm",
+   "name": "Angel or VC Firm"
+  },
+  {
+   "id": 424,
+   "alias": "app-development",
+   "name": "App development"
+  },
+  {
+   "id": 422,
+   "alias": "appliances",
+   "name": "Appliances"
+  },
+  {
+   "id": 164,
+   "alias": "artificial-intelligence",
+   "name": "Artificial Intelligence"
+  },
+  {
+   "id": 444,
+   "alias": "asset-management-discovery",
+   "name": "Asset Management + Discovery"
+  },
+  {
+   "id": 437,
+   "alias": "automation",
+   "name": "Automation"
+  },
+  {
+   "id": 165,
+   "alias": "automotive",
+   "name": "Automotive"
+  },
+  {
+   "id": 166,
+   "alias": "beauty",
+   "name": "Beauty"
+  },
+  {
+   "id": 167,
+   "alias": "big-data",
+   "name": "Big Data"
+  },
+  {
+   "id": 435,
+   "alias": "big-data-analytics",
+   "name": "Big Data Analytics"
+  },
+  {
+   "id": 372,
+   "alias": "biotech",
+   "name": "Biotech"
+  },
+  {
+   "id": 168,
+   "alias": "blockchain",
+   "name": "Blockchain"
+  },
+  {
+   "id": 373,
+   "alias": "business-intelligence-industry",
+   "name": "Business Intelligence"
+  },
+  {
+   "id": 169,
+   "alias": "cannabis",
+   "name": "Cannabis"
+  },
+  {
+   "id": 421,
+   "alias": "chemical",
+   "name": "Chemical"
+  },
+  {
+   "id": 170,
+   "alias": "cloud",
+   "name": "Cloud"
+  },
+  {
+   "id": 172,
+   "alias": "co-working-space-incubator",
+   "name": "Co-Working Space or Incubator"
+  },
+  {
+   "id": 171,
+   "alias": "computer-vision",
+   "name": "Computer Vision"
+  },
+  {
+   "id": 374,
+   "alias": "consulting",
+   "name": "Consulting"
+  },
+  {
+   "id": 173,
+   "alias": "consumer-web",
+   "name": "Consumer Web"
+  },
+  {
+   "id": 432,
+   "alias": "conversational-ai",
+   "name": "Conversational AI"
+  },
+  {
+   "id": 174,
+   "alias": "coupons",
+   "name": "Coupons"
+  },
+  {
+   "id": 414,
+   "alias": "cryptocurrency",
+   "name": "Cryptocurrency"
+  },
+  {
+   "id": 415,
+   "alias": "cybersecurity",
+   "name": "Cybersecurity"
+  },
+  {
+   "id": 442,
+   "alias": "data-privacy",
+   "name": "Data Privacy"
+  },
+  {
+   "id": 360,
+   "alias": "database",
+   "name": "Database"
+  },
+  {
+   "id": 429,
+   "alias": "defense",
+   "name": "Defense"
+  },
+  {
+   "id": 416,
+   "alias": "design",
+   "name": "Design"
+  },
+  {
+   "id": 175,
+   "alias": "digital-media",
+   "name": "Digital Media"
+  },
+  {
+   "id": 176,
+   "alias": "ecommerce",
+   "name": "eCommerce"
+  },
+  {
+   "id": 177,
+   "alias": "edtech",
+   "name": "Edtech"
+  },
+  {
+   "id": 379,
+   "alias": "energy",
+   "name": "Energy"
+  },
+  {
+   "id": 178,
+   "alias": "enterprise-web",
+   "name": "Enterprise Web"
+  },
+  {
+   "id": 375,
+   "alias": "esports",
+   "name": "Esports"
+  },
+  {
+   "id": 179,
+   "alias": "events",
+   "name": "Events"
+  },
+  {
+   "id": 180,
+   "alias": "fashion",
+   "name": "Fashion"
+  },
+  {
+   "id": 413,
+   "alias": "financial-services",
+   "name": "Financial Services"
+  },
+  {
+   "id": 181,
+   "alias": "fintech",
+   "name": "Fintech"
+  },
+  {
+   "id": 182,
+   "alias": "fitness",
+   "name": "Fitness"
+  },
+  {
+   "id": 183,
+   "alias": "food",
+   "name": "Food"
+  },
+  {
+   "id": 184,
+   "alias": "gaming",
+   "name": "Gaming"
+  },
+  {
+   "id": 433,
+   "alias": "generative-ai",
+   "name": "Generative AI"
+  },
+  {
+   "id": 185,
+   "alias": "greentech",
+   "name": "Greentech"
+  },
+  {
+   "id": 186,
+   "alias": "hardware-industry",
+   "name": "Hardware"
+  },
+  {
+   "id": 187,
+   "alias": "healthtech",
+   "name": "Healthtech"
+  },
+  {
+   "id": 420,
+   "alias": "hospitality",
+   "name": "Hospitality"
+  },
+  {
+   "id": 188,
+   "alias": "hr-tech",
+   "name": "HR Tech"
+  },
+  {
+   "id": 431,
+   "alias": "industrial",
+   "name": "Industrial"
+  },
+  {
+   "id": 189,
+   "alias": "information-technology",
+   "name": "Information Technology"
+  },
+  {
+   "id": 434,
+   "alias": "infrastructure-as-a-service-iaas",
+   "name": "Infrastructure as a Service (IaaS)"
+  },
+  {
+   "id": 190,
+   "alias": "insurance",
+   "name": "Insurance"
+  },
+  {
+   "id": 191,
+   "alias": "iot",
+   "name": "Internet of Things"
+  },
+  {
+   "id": 192,
+   "alias": "kids-family",
+   "name": "Kids + Family"
+  },
+  {
+   "id": 193,
+   "alias": "legal-tech",
+   "name": "Legal Tech"
+  },
+  {
+   "id": 194,
+   "alias": "logistics",
+   "name": "Logistics"
+  },
+  {
+   "id": 195,
+   "alias": "machine-learning-industry",
+   "name": "Machine Learning"
+  },
+  {
+   "id": 438,
+   "alias": "manufacturing",
+   "name": "Manufacturing"
+  },
+  {
+   "id": 196,
+   "alias": "marketing-tech",
+   "name": "Marketing Tech"
+  },
+  {
+   "id": 428,
+   "alias": "metaverse",
+   "name": "Metaverse"
+  },
+  {
+   "id": 197,
+   "alias": "mobile",
+   "name": "Mobile"
+  },
+  {
+   "id": 198,
+   "alias": "music",
+   "name": "Music"
+  },
+  {
+   "id": 376,
+   "alias": "nanotechnology",
+   "name": "Nanotechnology"
+  },
+  {
+   "id": 199,
+   "alias": "natural-language-processing",
+   "name": "Natural Language Processing"
+  },
+  {
+   "id": 200,
+   "alias": "news-entertainment",
+   "name": "News + Entertainment"
+  },
+  {
+   "id": 417,
+   "alias": "nft",
+   "name": "NFT"
+  },
+  {
+   "id": 201,
+   "alias": "on-demand",
+   "name": "On-Demand"
+  },
+  {
+   "id": 202,
+   "alias": "other-industry",
+   "name": "Other"
+  },
+  {
+   "id": 203,
+   "alias": "payments",
+   "name": "Payments"
+  },
+  {
+   "id": 204,
+   "alias": "pet",
+   "name": "Pet"
+  },
+  {
+   "id": 377,
+   "alias": "pharmaceutical",
+   "name": "Pharmaceutical"
+  },
+  {
+   "id": 205,
+   "alias": "productivity",
+   "name": "Productivity"
+  },
+  {
+   "id": 206,
+   "alias": "professional-services",
+   "name": "Professional Services"
+  },
+  {
+   "id": 425,
+   "alias": "proptech",
+   "name": "PropTech"
+  },
+  {
+   "id": 443,
+   "alias": "quantitative-trading",
+   "name": "Quantitative Trading"
+  },
+  {
+   "id": 427,
+   "alias": "quantum-computing",
+   "name": "Quantum Computing"
+  },
+  {
+   "id": 207,
+   "alias": "real-estate",
+   "name": "Real Estate"
+  },
+  {
+   "id": 441,
+   "alias": "renewable-energy",
+   "name": "Renewable Energy"
+  },
+  {
+   "id": 208,
+   "alias": "retail",
+   "name": "Retail"
+  },
+  {
+   "id": 209,
+   "alias": "robotics",
+   "name": "Robotics"
+  },
+  {
+   "id": 210,
+   "alias": "sales-industry",
+   "name": "Sales"
+  },
+  {
+   "id": 211,
+   "alias": "security-industry",
+   "name": "Security"
+  },
+  {
+   "id": 378,
+   "alias": "semiconductor",
+   "name": "Semiconductor"
+  },
+  {
+   "id": 436,
+   "alias": "seo",
+   "name": "SEO"
+  },
+  {
+   "id": 212,
+   "alias": "sharing-economy",
+   "name": "Sharing Economy"
+  },
+  {
+   "id": 214,
+   "alias": "social-impact",
+   "name": "Social Impact"
+  },
+  {
+   "id": 213,
+   "alias": "social-media",
+   "name": "Social Media"
+  },
+  {
+   "id": 215,
+   "alias": "software",
+   "name": "Software"
+  },
+  {
+   "id": 439,
+   "alias": "solar",
+   "name": "Solar"
+  },
+  {
+   "id": 216,
+   "alias": "sports",
+   "name": "Sports"
+  },
+  {
+   "id": 426,
+   "alias": "telehealth",
+   "name": "Telehealth"
+  },
+  {
+   "id": 217,
+   "alias": "transportation",
+   "name": "Transportation"
+  },
+  {
+   "id": 218,
+   "alias": "travel",
+   "name": "Travel"
+  },
+  {
+   "id": 430,
+   "alias": "utilities",
+   "name": "Utilities"
+  },
+  {
+   "id": 219,
+   "alias": "virtual-reality",
+   "name": "Virtual Reality"
+  },
+  {
+   "id": 220,
+   "alias": "wearables",
+   "name": "Wearables"
+  },
+  {
+   "id": 418,
+   "alias": "web3",
+   "name": "Web3"
+  }
+ ],
+ "metros": [
+  {
+   "id": 30,
+   "alias": "albuquerque",
+   "name": "Albuquerque",
+   "city": "Albuquerque",
+   "state": "New Mexico",
+   "state_code": "NM",
+   "country": "USA",
+   "latitude": 35.08423,
+   "longitude": -106.64905
+  },
+  {
+   "id": 75,
+   "alias": "ann-arbor",
+   "name": "Ann Arbor",
+   "city": "Ann Arbor",
+   "state": "Michigan",
+   "state_code": "MI",
+   "country": "USA",
+   "latitude": 42.2821,
+   "longitude": -83.74847
+  },
+  {
+   "id": 29,
+   "alias": "atlanta",
+   "name": "Atlanta",
+   "city": "Atlanta",
+   "state": "Georgia",
+   "state_code": "GA",
+   "country": "USA",
+   "latitude": 33.74831,
+   "longitude": -84.39111
+  },
+  {
+   "id": 4,
+   "alias": "austin",
+   "name": "Austin",
+   "city": "Austin",
+   "state": "Texas",
+   "state_code": "TX",
+   "country": "USA",
+   "latitude": 30.26759,
+   "longitude": -97.74299
+  },
+  {
+   "id": 10,
+   "alias": "baltimore",
+   "name": "Baltimore",
+   "city": "Baltimore",
+   "state": "Maryland",
+   "state_code": "MD",
+   "country": "USA",
+   "latitude": 39.29058,
+   "longitude": -76.60926
+  },
+  {
+   "id": 76,
+   "alias": "baton-rouge",
+   "name": "Baton Rouge",
+   "city": "Baton Rouge",
+   "state": "Louisiana",
+   "state_code": "LA",
+   "country": "USA",
+   "latitude": 30.44335,
+   "longitude": -91.18664
+  },
+  {
+   "id": 33,
+   "alias": "birmingham",
+   "name": "Birmingham",
+   "city": "Birmingham",
+   "state": "Alabama",
+   "state_code": "AL",
+   "country": "USA",
+   "latitude": 33.52072,
+   "longitude": -86.81179
+  },
+  {
+   "id": 34,
+   "alias": "boise",
+   "name": "Boise",
+   "city": "Boise",
+   "state": "Idaho",
+   "state_code": "ID",
+   "country": "USA",
+   "latitude": 43.60764,
+   "longitude": -116.1934
+  },
+  {
+   "id": 6,
+   "alias": "boston",
+   "name": "Boston",
+   "city": "Boston",
+   "state": "Massachusetts",
+   "state_code": "MA",
+   "country": "USA",
+   "latitude": 42.35866,
+   "longitude": -71.05674
+  },
+  {
+   "id": 35,
+   "alias": "buffalo",
+   "name": "Buffalo",
+   "city": "Buffalo",
+   "state": "New York",
+   "state_code": "NY",
+   "country": "USA",
+   "latitude": 42.88545,
+   "longitude": -78.87846
+  },
+  {
+   "id": 36,
+   "alias": "charleston",
+   "name": "Charleston",
+   "city": "Charleston",
+   "state": "South Carolina",
+   "state_code": "SC",
+   "country": "USA",
+   "latitude": 32.78115,
+   "longitude": -79.9316
+  },
+  {
+   "id": 11,
+   "alias": "charlotte",
+   "name": "Charlotte",
+   "city": "Charlotte",
+   "state": "North Carolina",
+   "state_code": "NC",
+   "country": "USA",
+   "latitude": 35.22286,
+   "longitude": -80.83796
+  },
+  {
+   "id": 1,
+   "alias": "chicago",
+   "name": "Chicago",
+   "city": "Chicago",
+   "state": "Illinois",
+   "state_code": "IL",
+   "country": "USA",
+   "latitude": 41.88425,
+   "longitude": -87.63245
+  },
+  {
+   "id": 38,
+   "alias": "cincinnati",
+   "name": "Cincinnati",
+   "city": "Cincinnati",
+   "state": "Ohio",
+   "state_code": "OH",
+   "country": "USA",
+   "latitude": 39.12711,
+   "longitude": -84.51439
+  },
+  {
+   "id": 39,
+   "alias": "cleveland",
+   "name": "Cleveland",
+   "city": "Cleveland",
+   "state": "Ohio",
+   "state_code": "OH",
+   "country": "USA",
+   "latitude": 41.50473,
+   "longitude": -81.69074
+  },
+  {
+   "id": 2,
+   "alias": "colorado",
+   "name": "Colorado",
+   "city": "",
+   "state": "Colorado",
+   "state_code": "CO",
+   "country": "USA",
+   "latitude": 38.998550562,
+   "longitude": -105.547816373
+  },
+  {
+   "id": 77,
+   "alias": "columbus",
+   "name": "Columbus",
+   "city": "Columbus",
+   "state": "Ohio",
+   "state_code": "OH",
+   "country": "USA",
+   "latitude": 39.96199,
+   "longitude": -83.00275
+  },
+  {
+   "id": 12,
+   "alias": "dallas-fort-worth",
+   "name": "Dallas-Fort Worth",
+   "city": "Dallas",
+   "state": "Texas",
+   "state_code": "TX",
+   "country": "USA",
+   "latitude": 32.77822,
+   "longitude": -96.79512
+  },
+  {
+   "id": 78,
+   "alias": "dayton",
+   "name": "Dayton",
+   "city": "Dayton",
+   "state": "Ohio",
+   "state_code": "OH",
+   "country": "USA",
+   "latitude": 39.7592,
+   "longitude": -84.19381
+  },
+  {
+   "id": 41,
+   "alias": "des-moines",
+   "name": "Des Moines",
+   "city": "Des Moines",
+   "state": "Iowa",
+   "state_code": "IA",
+   "country": "USA",
+   "latitude": 41.58981,
+   "longitude": -93.61538
+  },
+  {
+   "id": 13,
+   "alias": "detroit",
+   "name": "Detroit",
+   "city": "Detroit",
+   "state": "Michigan",
+   "state_code": "MI",
+   "country": "USA",
+   "latitude": 42.33168,
+   "longitude": -83.048
+  },
+  {
+   "id": 79,
+   "alias": "fayetteville-springdale-rogers",
+   "name": "Fayetteville-Springdale-Rogers",
+   "city": "Fayetteville",
+   "state": "Arkansas",
+   "state_code": "",
+   "country": "USA",
+   "latitude": 36.06354,
+   "longitude": -94.15791
+  },
+  {
+   "id": 81,
+   "alias": "greensboro",
+   "name": "Greensboro",
+   "city": "Greensboro",
+   "state": "North Carolina",
+   "state_code": "NC",
+   "country": "USA",
+   "latitude": 36.06908,
+   "longitude": -79.79505
+  },
+  {
+   "id": 82,
+   "alias": "hampton-roads",
+   "name": "Hampton Roads",
+   "city": "Hampton",
+   "state": "Virginia",
+   "state_code": "VA",
+   "country": "USA",
+   "latitude": 37.0278,
+   "longitude": -76.34501
+  },
+  {
+   "id": 43,
+   "alias": "hartford",
+   "name": "Hartford",
+   "city": "Hartford",
+   "state": "Connecticut",
+   "state_code": "CT",
+   "country": "USA",
+   "latitude": 41.76381,
+   "longitude": -72.67397
+  },
+  {
+   "id": 14,
+   "alias": "houston",
+   "name": "Houston",
+   "city": "Houston",
+   "state": "Texas",
+   "state_code": "TX",
+   "country": "USA",
+   "latitude": 29.76078,
+   "longitude": -95.36952
+  },
+  {
+   "id": 83,
+   "alias": "huntsville",
+   "name": "Huntsville",
+   "city": "Huntsville",
+   "state": "Alabama",
+   "state_code": "AL",
+   "country": "USA",
+   "latitude": 34.72929,
+   "longitude": -86.5851
+  },
+  {
+   "id": 45,
+   "alias": "indianapolis",
+   "name": "Indianapolis",
+   "city": "Indianapolis",
+   "state": "Indiana",
+   "state_code": "IN",
+   "country": "USA",
+   "latitude": 39.76691,
+   "longitude": -86.15012
+  },
+  {
+   "id": 84,
+   "alias": "jacksonville",
+   "name": "Jacksonville",
+   "city": "Jacksonville",
+   "state": "Florida",
+   "state_code": "FL",
+   "country": "USA",
+   "latitude": 30.33147,
+   "longitude": -81.65622
+  },
+  {
+   "id": 46,
+   "alias": "kansas-city",
+   "name": "Kansas City",
+   "city": "Kansas City",
+   "state": "Missouri",
+   "state_code": "MO",
+   "country": "USA",
+   "latitude": 39.10344,
+   "longitude": -94.58311
+  },
+  {
+   "id": 15,
+   "alias": "las-vegas",
+   "name": "Las Vegas",
+   "city": "Las Vegas",
+   "state": "Nevada",
+   "state_code": "NV",
+   "country": "USA",
+   "latitude": 36.17193,
+   "longitude": -115.14001
+  },
+  {
+   "id": 85,
+   "alias": "lexington-ky",
+   "name": "Lexington",
+   "city": "Lexington",
+   "state": "Kentucky",
+   "state_code": "KY",
+   "country": "USA",
+   "latitude": 38.04861,
+   "longitude": -84.5003
+  },
+  {
+   "id": 86,
+   "alias": "lincoln",
+   "name": "Lincoln",
+   "city": "Lincoln",
+   "state": "Nebraska",
+   "state_code": "NE",
+   "country": "USA",
+   "latitude": 40.81362,
+   "longitude": -96.7073
+  },
+  {
+   "id": 87,
+   "alias": "little-rock",
+   "name": "Little Rock",
+   "city": "Little Rock",
+   "state": "Arkansas",
+   "state_code": "",
+   "country": "USA",
+   "latitude": 34.7487,
+   "longitude": -92.27485
+  },
+  {
+   "id": 3,
+   "alias": "los-angeles",
+   "name": "Los Angeles",
+   "city": "Los Angeles",
+   "state": "California",
+   "state_code": "CA",
+   "country": "USA",
+   "latitude": 34.05357,
+   "longitude": -118.24545
+  },
+  {
+   "id": 88,
+   "alias": "louisville",
+   "name": "Louisville",
+   "city": "Louisville",
+   "state": "Kentucky",
+   "state_code": "KY",
+   "country": "USA",
+   "latitude": 38.25489,
+   "longitude": -85.76666
+  },
+  {
+   "id": 72,
+   "alias": "madison",
+   "name": "Madison",
+   "city": "Madison",
+   "state": "Wisconsin",
+   "state_code": "WI",
+   "country": "USA",
+   "latitude": 43.07313,
+   "longitude": -89.38644
+  },
+  {
+   "id": 48,
+   "alias": "memphis",
+   "name": "Memphis",
+   "city": "Memphis",
+   "state": "Tennessee",
+   "state_code": "TN",
+   "country": "USA",
+   "latitude": 35.14976,
+   "longitude": -90.04925
+  },
+  {
+   "id": 16,
+   "alias": "miami",
+   "name": "Miami",
+   "city": "Miami",
+   "state": "Florida",
+   "state_code": "FL",
+   "country": "USA",
+   "latitude": 25.77481,
+   "longitude": -80.19773
+  },
+  {
+   "id": 50,
+   "alias": "milwaukee",
+   "name": "Milwaukee",
+   "city": "Milwaukee",
+   "state": "Wisconsin",
+   "state_code": "WI",
+   "country": "USA",
+   "latitude": 43.04223,
+   "longitude": -87.9069
+  },
+  {
+   "id": 17,
+   "alias": "minneapolis-saint-paul",
+   "name": "Minneapolis–Saint Paul",
+   "city": "Minneapolis",
+   "state": "Minnesota",
+   "state_code": "MN",
+   "country": "USA",
+   "latitude": 44.97902,
+   "longitude": -93.26494
+  },
+  {
+   "id": 18,
+   "alias": "nashville",
+   "name": "Nashville",
+   "city": "Nashville",
+   "state": "Tennessee",
+   "state_code": "TN",
+   "country": "USA",
+   "latitude": 36.16784,
+   "longitude": -86.77816
+  },
+  {
+   "id": 9,
+   "alias": "national",
+   "name": "National",
+   "city": null,
+   "state": null,
+   "state_code": "",
+   "country": null,
+   "latitude": null,
+   "longitude": null
+  },
+  {
+   "id": 53,
+   "alias": "new-orleans",
+   "name": "New Orleans",
+   "city": "New Orleans",
+   "state": "Louisiana",
+   "state_code": "LA",
+   "country": "USA",
+   "latitude": 29.9537,
+   "longitude": -90.07775
+  },
+  {
+   "id": 5,
+   "alias": "new-york-city",
+   "name": "New York City",
+   "city": "New York",
+   "state": "New York",
+   "state_code": "NY",
+   "country": "USA",
+   "latitude": 40.71453,
+   "longitude": -74.00712
+  },
+  {
+   "id": 89,
+   "alias": "ogden",
+   "name": "Ogden",
+   "city": "Ogden",
+   "state": "Utah",
+   "state_code": "UT",
+   "country": "USA",
+   "latitude": 41.22257,
+   "longitude": -111.97047
+  },
+  {
+   "id": 54,
+   "alias": "oklahoma-city",
+   "name": "Oklahoma City",
+   "city": "Oklahoma City",
+   "state": "Oklahoma",
+   "state_code": "OK",
+   "country": "USA",
+   "latitude": 35.47203,
+   "longitude": -97.52107
+  },
+  {
+   "id": 55,
+   "alias": "omaha",
+   "name": "Omaha",
+   "city": "Omaha",
+   "state": "Nebraska",
+   "state_code": "NE",
+   "country": "USA",
+   "latitude": 41.26068,
+   "longitude": -95.94026
+  },
+  {
+   "id": 56,
+   "alias": "orlando",
+   "name": "Orlando",
+   "city": "Orlando",
+   "state": "Florida",
+   "state_code": "FL",
+   "country": "USA",
+   "latitude": 28.53823,
+   "longitude": -81.37739
+  },
+  {
+   "id": 80,
+   "alias": "palm-bay-melbourne-titusville",
+   "name": "Palm Bay-Melbourne-Titusville",
+   "city": "Palm Bay",
+   "state": "Florida",
+   "state_code": "",
+   "country": "USA",
+   "latitude": 28.00004,
+   "longitude": -80.67262
+  },
+  {
+   "id": 90,
+   "alias": "pensacola",
+   "name": "Pensacola",
+   "city": "Pensacola",
+   "state": "Florida",
+   "state_code": "FL",
+   "country": "USA",
+   "latitude": 30.42099,
+   "longitude": -87.21726
+  },
+  {
+   "id": 91,
+   "alias": "peoria",
+   "name": "Peoria",
+   "city": "Peoria",
+   "state": "Illinois",
+   "state_code": "IL",
+   "country": "USA",
+   "latitude": 40.69236,
+   "longitude": -89.58799
+  },
+  {
+   "id": 19,
+   "alias": "philadelphia",
+   "name": "Philadelphia",
+   "city": "Philadelphia",
+   "state": "Pennsylvania",
+   "state_code": "PA",
+   "country": "USA",
+   "latitude": 39.95222,
+   "longitude": -75.16218
+  },
+  {
+   "id": 20,
+   "alias": "phoenix-mesa-scottsdale",
+   "name": "Phoenix – Mesa – Scottsdale",
+   "city": "Phoenix",
+   "state": "Arizona",
+   "state_code": "AZ",
+   "country": "USA",
+   "latitude": 33.44825,
+   "longitude": -112.0758
+  },
+  {
+   "id": 21,
+   "alias": "pittsburgh",
+   "name": "Pittsburgh",
+   "city": "Pittsburgh",
+   "state": "Pennsylvania",
+   "state_code": "PA",
+   "country": "USA",
+   "latitude": 40.43851,
+   "longitude": -79.99734
+  },
+  {
+   "id": 22,
+   "alias": "portland",
+   "name": "Portland",
+   "city": "Portland",
+   "state": "Oregon",
+   "state_code": "OR",
+   "country": "USA",
+   "latitude": 45.51179,
+   "longitude": -122.67563
+  },
+  {
+   "id": 92,
+   "alias": "portland-me",
+   "name": "Portland",
+   "city": "Portland",
+   "state": "Maine",
+   "state_code": "ME",
+   "country": "USA",
+   "latitude": 43.65915,
+   "longitude": -70.25665
+  },
+  {
+   "id": 61,
+   "alias": "providence",
+   "name": "Providence",
+   "city": "Providence",
+   "state": "Rhode Island",
+   "state_code": "RI",
+   "country": "USA",
+   "latitude": 41.82388,
+   "longitude": -71.41198
+  },
+  {
+   "id": 93,
+   "alias": "provo",
+   "name": "Provo",
+   "city": "Provo",
+   "state": "Utah",
+   "state_code": "UT",
+   "country": "USA",
+   "latitude": 40.2337,
+   "longitude": -111.66889
+  },
+  {
+   "id": 23,
+   "alias": "raleigh-durham",
+   "name": "Raleigh-Durham",
+   "city": "Raleigh",
+   "state": "North Carolina",
+   "state_code": "NC",
+   "country": "USA",
+   "latitude": 35.78547,
+   "longitude": -78.6427
+  },
+  {
+   "id": 94,
+   "alias": "reno",
+   "name": "Reno",
+   "city": "Reno",
+   "state": "Nevada",
+   "state_code": "NV",
+   "country": "USA",
+   "latitude": 39.52766,
+   "longitude": -119.81353
+  },
+  {
+   "id": 95,
+   "alias": "richmond",
+   "name": "Richmond",
+   "city": "Richmond",
+   "state": "Virginia",
+   "state_code": "VA",
+   "country": "USA",
+   "latitude": 37.54068,
+   "longitude": -77.43367
+  },
+  {
+   "id": 96,
+   "alias": "rochester",
+   "name": "Rochester",
+   "city": "Rochester",
+   "state": "New York",
+   "state_code": "NY",
+   "country": "USA",
+   "latitude": 43.1558,
+   "longitude": -77.61632
+  },
+  {
+   "id": 63,
+   "alias": "sacramento",
+   "name": "Sacramento",
+   "city": "Sacramento",
+   "state": "California",
+   "state_code": "CA",
+   "country": "USA",
+   "latitude": 38.57944,
+   "longitude": -121.49085
+  },
+  {
+   "id": 24,
+   "alias": "salt-lake-city",
+   "name": "Salt Lake City",
+   "city": "Salt Lake City",
+   "state": "Utah",
+   "state_code": "UT",
+   "country": "USA",
+   "latitude": 40.76031,
+   "longitude": -111.88822
+  },
+  {
+   "id": 25,
+   "alias": "san-antonio",
+   "name": "San Antonio",
+   "city": "San Antonio",
+   "state": "Texas",
+   "state_code": "TX",
+   "country": "USA",
+   "latitude": 29.42458,
+   "longitude": -98.49461
+  },
+  {
+   "id": 26,
+   "alias": "san-diego",
+   "name": "San Diego",
+   "city": "San Diego",
+   "state": "California",
+   "state_code": "CA",
+   "country": "USA",
+   "latitude": 32.71568,
+   "longitude": -117.16171
+  },
+  {
+   "id": 8,
+   "alias": "san-francisco",
+   "name": "San Francisco",
+   "city": "San Francisco",
+   "state": "California",
+   "state_code": "CA",
+   "country": "USA",
+   "latitude": 37.77712,
+   "longitude": -122.41966
+  },
+  {
+   "id": 97,
+   "alias": "san-luis-obispo",
+   "name": "San Luis Obispo",
+   "city": "San Luis Obispo",
+   "state": "California",
+   "state_code": "CA",
+   "country": "USA",
+   "latitude": 35.28579,
+   "longitude": -120.66275
+  },
+  {
+   "id": 98,
+   "alias": "santa-cruz",
+   "name": "Santa Cruz",
+   "city": "Santa Cruz",
+   "state": "California",
+   "state_code": "CA",
+   "country": "USA",
+   "latitude": 36.97424,
+   "longitude": -122.03098
+  },
+  {
+   "id": 7,
+   "alias": "seattle",
+   "name": "Seattle",
+   "city": "Seattle",
+   "state": "Washington",
+   "state_code": "WA",
+   "country": "USA",
+   "latitude": 47.60357,
+   "longitude": -122.32945
+  },
+  {
+   "id": 99,
+   "alias": "spokane",
+   "name": "Spokane",
+   "city": "Spokane",
+   "state": "Washington",
+   "state_code": "WA",
+   "country": "USA",
+   "latitude": 47.65726,
+   "longitude": -117.41162
+  },
+  {
+   "id": 68,
+   "alias": "st-louis",
+   "name": "St. Louis",
+   "city": "St Louis",
+   "state": "Missouri",
+   "state_code": "MO",
+   "country": "USA",
+   "latitude": 38.62775,
+   "longitude": -90.19956
+  },
+  {
+   "id": 100,
+   "alias": "tallahassee",
+   "name": "Tallahassee",
+   "city": "Tallahassee",
+   "state": "Florida",
+   "state_code": "FL",
+   "country": "USA",
+   "latitude": 30.43977,
+   "longitude": -84.28065
+  },
+  {
+   "id": 27,
+   "alias": "tampa-bay",
+   "name": "Tampa Bay",
+   "city": "Tampa",
+   "state": "Florida",
+   "state_code": "FL",
+   "country": "USA",
+   "latitude": 27.94653,
+   "longitude": -82.45927
+  },
+  {
+   "id": 101,
+   "alias": "tucson",
+   "name": "Tucson",
+   "city": "Tucson",
+   "state": "Arizona",
+   "state_code": "AZ",
+   "country": "USA",
+   "latitude": 32.22177,
+   "longitude": -110.96977
+  },
+  {
+   "id": 102,
+   "alias": "tulsa",
+   "name": "Tulsa",
+   "city": "Tulsa",
+   "state": "Oklahoma",
+   "state_code": "OK",
+   "country": "USA",
+   "latitude": 36.15011,
+   "longitude": -95.99352
+  },
+  {
+   "id": 28,
+   "alias": "washington-dc",
+   "name": "Washington DC",
+   "city": "Washington",
+   "state": "District of Columbia",
+   "state_code": "",
+   "country": "USA",
+   "latitude": 38.89037,
+   "longitude": -77.03196
+  },
+  {
+   "id": 103,
+   "alias": "wichita",
+   "name": "Wichita",
+   "city": "Wichita",
+   "state": "Kansas",
+   "state_code": "KS",
+   "country": "USA",
+   "latitude": 37.68749,
+   "longitude": -97.33558
+  },
+  {
+   "id": 104,
+   "alias": "wilmington",
+   "name": "Wilmington",
+   "city": "Wilmington",
+   "state": "North Carolina",
+   "state_code": "NC",
+   "country": "USA",
+   "latitude": 34.23497,
+   "longitude": -77.946
+  }
+ ],
+ "tech_stacks": [
+  {
+   "id": 1,
+   "alias": "access",
+   "name": "Access",
+   "type_id": 1
+  },
+  {
+   "id": 99,
+   "alias": "act",
+   "name": "Act!",
+   "type_id": 9
+  },
+  {
+   "id": 403,
+   "alias": "bizible",
+   "name": "Adobe Bizible",
+   "type_id": 9
+  },
+  {
+   "id": 117,
+   "alias": "adobe-campaign",
+   "name": "Adobe Campaign",
+   "type_id": 11
+  },
+  {
+   "id": 75,
+   "alias": "affinity-designer",
+   "name": "Affinity Designer",
+   "type_id": 6
+  },
+  {
+   "id": 85,
+   "alias": "aha",
+   "name": "Aha!",
+   "type_id": 7
+  },
+  {
+   "id": 477,
+   "alias": "airtable",
+   "name": "Airtable",
+   "type_id": 7
+  },
+  {
+   "id": 421,
+   "alias": "angular",
+   "name": "Angular",
+   "type_id": 2
+  },
+  {
+   "id": 19,
+   "alias": "angularjs",
+   "name": "Angular.js",
+   "type_id": 2
+  },
+  {
+   "id": 443,
+   "alias": "apache-groovy",
+   "name": "Apache Groovy",
+   "type_id": 3
+  },
+  {
+   "id": 398,
+   "alias": "apollo",
+   "name": "Apollo",
+   "type_id": 11
+  },
+  {
+   "id": 86,
+   "alias": "asana",
+   "name": "Asana",
+   "type_id": 7
+  },
+  {
+   "id": 20,
+   "alias": "asp-net",
+   "name": "ASP.NET",
+   "type_id": 2
+  },
+  {
+   "id": 439,
+   "alias": "assembly",
+   "name": "Assembly",
+   "type_id": 3
+  },
+  {
+   "id": 109,
+   "alias": "aweber",
+   "name": "AWeber",
+   "type_id": 10
+  },
+  {
+   "id": 385,
+   "alias": "aws",
+   "name": "AWS (Amazon Web Services)",
+   "type_id": 12
+  },
+  {
+   "id": 417,
+   "alias": "aws-redshift",
+   "name": "AWS Redshift",
+   "type_id": 1
+  },
+  {
+   "id": 76,
+   "alias": "axure",
+   "name": "Axure",
+   "type_id": 6
+  },
+  {
+   "id": 21,
+   "alias": "backbonejs",
+   "name": "Backbone.js",
+   "type_id": 2
+  },
+  {
+   "id": 77,
+   "alias": "balsamiq",
+   "name": "Balsamiq",
+   "type_id": 6
+  },
+  {
+   "id": 87,
+   "alias": "basecamp",
+   "name": "Basecamp",
+   "type_id": 7
+  },
+  {
+   "id": 418,
+   "alias": "big-query",
+   "name": "BigQuery",
+   "type_id": 1
+  },
+  {
+   "id": 46,
+   "alias": "c-sharp",
+   "name": "C#",
+   "type_id": 3
+  },
+  {
+   "id": 47,
+   "alias": "cpp",
+   "name": "C++",
+   "type_id": 3
+  },
+  {
+   "id": 22,
+   "alias": "caffe",
+   "name": "Caffe",
+   "type_id": 2
+  },
+  {
+   "id": 23,
+   "alias": "cakephp",
+   "name": "CakePHP",
+   "type_id": 2
+  },
+  {
+   "id": 110,
+   "alias": "campain-monitor",
+   "name": "Campaign Monitor",
+   "type_id": 10
+  },
+  {
+   "id": 393,
+   "alias": "canva",
+   "name": "Canva",
+   "type_id": 6
+  },
+  {
+   "id": 2,
+   "alias": "cassandra",
+   "name": "Cassandra",
+   "type_id": 1
+  },
+  {
+   "id": 404,
+   "alias": "chrous-ai",
+   "name": "Chorus.AI",
+   "type_id": 9
+  },
+  {
+   "id": 380,
+   "alias": "circleci",
+   "name": "CircleCI",
+   "type_id": 2
+  },
+  {
+   "id": 434,
+   "alias": "cocoa-touch",
+   "name": "Cocoa Touch",
+   "type_id": 2
+  },
+  {
+   "id": 24,
+   "alias": "codeigniter",
+   "name": "CodeIgniter",
+   "type_id": 2
+  },
+  {
+   "id": 88,
+   "alias": "confluence",
+   "name": "Confluence",
+   "type_id": 7
+  },
+  {
+   "id": 111,
+   "alias": "constant-contact",
+   "name": "Constant Contact",
+   "type_id": 10
+  },
+  {
+   "id": 447,
+   "alias": "css",
+   "name": "CSS",
+   "type_id": 3
+  },
+  {
+   "id": 429,
+   "alias": "cypress",
+   "name": "Cypress",
+   "type_id": 2
+  },
+  {
+   "id": 60,
+   "alias": "d3-js",
+   "name": "D3JS",
+   "type_id": 4
+  },
+  {
+   "id": 440,
+   "alias": "dart",
+   "name": "Dart",
+   "type_id": 3
+  },
+  {
+   "id": 3,
+   "alias": "db2",
+   "name": "DB2",
+   "type_id": 1
+  },
+  {
+   "id": 459,
+   "alias": "digital-ocean",
+   "name": "DigitalOcean",
+   "type_id": 12
+  },
+  {
+   "id": 25,
+   "alias": "django",
+   "name": "Django",
+   "type_id": 2
+  },
+  {
+   "id": 426,
+   "alias": "docker",
+   "name": "Docker",
+   "type_id": 2
+  },
+  {
+   "id": 405,
+   "alias": "docusign",
+   "name": "DocuSign",
+   "type_id": 9
+  },
+  {
+   "id": 45,
+   "alias": "dotnet",
+   "name": "dotnet",
+   "type_id": 3
+  },
+  {
+   "id": 410,
+   "alias": "drift",
+   "name": "Drift",
+   "type_id": 9
+  },
+  {
+   "id": 95,
+   "alias": "drupal",
+   "name": "Drupal",
+   "type_id": 8
+  },
+  {
+   "id": 415,
+   "alias": "dynamodb",
+   "name": "DynamoDB",
+   "type_id": 1
+  },
+  {
+   "id": 414,
+   "alias": "elasticsearch",
+   "name": "Elasticsearch",
+   "type_id": 1
+  },
+  {
+   "id": 448,
+   "alias": "elixir",
+   "name": "Elixir",
+   "type_id": 3
+  },
+  {
+   "id": 446,
+   "alias": "elm",
+   "name": "Elm",
+   "type_id": 3
+  },
+  {
+   "id": 26,
+   "alias": "emberjs",
+   "name": "Ember.js",
+   "type_id": 2
+  },
+  {
+   "id": 436,
+   "alias": "epic",
+   "name": "EPIC",
+   "type_id": 2
+  },
+  {
+   "id": 27,
+   "alias": "express",
+   "name": "Express",
+   "type_id": 2
+  },
+  {
+   "id": 389,
+   "alias": "figma",
+   "name": "Figma",
+   "type_id": 6
+  },
+  {
+   "id": 4,
+   "alias": "file-maker",
+   "name": "FileMaker",
+   "type_id": 1
+  },
+  {
+   "id": 413,
+   "alias": "firebase",
+   "name": "Firebase",
+   "type_id": 1
+  },
+  {
+   "id": 28,
+   "alias": "flask",
+   "name": "Flask",
+   "type_id": 2
+  },
+  {
+   "id": 29,
+   "alias": "flex",
+   "name": "Flex",
+   "type_id": 2
+  },
+  {
+   "id": 61,
+   "alias": "flux",
+   "name": "Flux",
+   "type_id": 4
+  },
+  {
+   "id": 457,
+   "alias": "freshworks-suite",
+   "name": "Freshworks Suite",
+   "type_id": 9
+  },
+  {
+   "id": 118,
+   "alias": "fullcontact",
+   "name": "FullContact",
+   "type_id": 11
+  },
+  {
+   "id": 431,
+   "alias": "gatsby",
+   "name": "Gatsby",
+   "type_id": 2
+  },
+  {
+   "id": 460,
+   "alias": "github",
+   "name": "GitHub",
+   "type_id": 12
+  },
+  {
+   "id": 461,
+   "alias": "gitlab",
+   "name": "GitLab",
+   "type_id": 12
+  },
+  {
+   "id": 48,
+   "alias": "golang",
+   "name": "Golang",
+   "type_id": 3
+  },
+  {
+   "id": 70,
+   "alias": "google-analytics",
+   "name": "Google Analytics",
+   "type_id": 5
+  },
+  {
+   "id": 386,
+   "alias": "google-cloud",
+   "name": "Google Cloud",
+   "type_id": 12
+  },
+  {
+   "id": 396,
+   "alias": "google-docs",
+   "name": "Google Docs",
+   "type_id": 7
+  },
+  {
+   "id": 395,
+   "alias": "google-drive",
+   "name": "Google Drive",
+   "type_id": 7
+  },
+  {
+   "id": 467,
+   "alias": "google-hangouts",
+   "name": "Google Hangouts",
+   "type_id": 14
+  },
+  {
+   "id": 397,
+   "alias": "google-slides",
+   "name": "Google Slides",
+   "type_id": 7
+  },
+  {
+   "id": 420,
+   "alias": "graphql",
+   "name": "GraphQL",
+   "type_id": 2
+  },
+  {
+   "id": 430,
+   "alias": "grpc",
+   "name": "gRPC",
+   "type_id": 2
+  },
+  {
+   "id": 30,
+   "alias": "hadoop",
+   "name": "Hadoop",
+   "type_id": 2
+  },
+  {
+   "id": 5,
+   "alias": "hbase",
+   "name": "HBase",
+   "type_id": 1
+  },
+  {
+   "id": 6,
+   "alias": "hive",
+   "name": "Hive",
+   "type_id": 1
+  },
+  {
+   "id": 412,
+   "alias": "hootsuite",
+   "name": "HootSuite",
+   "type_id": 8
+  },
+  {
+   "id": 100,
+   "alias": "hubspot",
+   "name": "HubSpot",
+   "type_id": 9
+  },
+  {
+   "id": 78,
+   "alias": "illustrator",
+   "name": "Illustrator",
+   "type_id": 6
+  },
+  {
+   "id": 7,
+   "alias": "informix",
+   "name": "Informix",
+   "type_id": 1
+  },
+  {
+   "id": 101,
+   "alias": "infusionsoft",
+   "name": "InfusionSoft",
+   "type_id": 9
+  },
+  {
+   "id": 102,
+   "alias": "insightly",
+   "name": "Insightly",
+   "type_id": 9
+  },
+  {
+   "id": 407,
+   "alias": "insightsquared",
+   "name": "InsightSquared",
+   "type_id": 9
+  },
+  {
+   "id": 103,
+   "alias": "intercom",
+   "name": "Intercom",
+   "type_id": 9
+  },
+  {
+   "id": 79,
+   "alias": "invision",
+   "name": "InVision",
+   "type_id": 6
+  },
+  {
+   "id": 423,
+   "alias": "ionic",
+   "name": "Ionic",
+   "type_id": 2
+  },
+  {
+   "id": 478,
+   "alias": "iterable",
+   "name": "Iterable",
+   "type_id": 11
+  },
+  {
+   "id": 49,
+   "alias": "java",
+   "name": "Java",
+   "type_id": 3
+  },
+  {
+   "id": 50,
+   "alias": "javascript",
+   "name": "JavaScript",
+   "type_id": 3
+  },
+  {
+   "id": 383,
+   "alias": "jest",
+   "name": "Jest",
+   "type_id": 2
+  },
+  {
+   "id": 89,
+   "alias": "jira",
+   "name": "JIRA",
+   "type_id": 7
+  },
+  {
+   "id": 96,
+   "alias": "joomla",
+   "name": "Joomla!",
+   "type_id": 8
+  },
+  {
+   "id": 62,
+   "alias": "jquery",
+   "name": "jQuery",
+   "type_id": 4
+  },
+  {
+   "id": 63,
+   "alias": "jquery-ui",
+   "name": "jQuery UI",
+   "type_id": 4
+  },
+  {
+   "id": 31,
+   "alias": "jsf",
+   "name": "JSF",
+   "type_id": 2
+  },
+  {
+   "id": 381,
+   "alias": "jupyter",
+   "name": "Jupyter",
+   "type_id": 2
+  },
+  {
+   "id": 427,
+   "alias": "kafka",
+   "name": "Kafka",
+   "type_id": 2
+  },
+  {
+   "id": 454,
+   "alias": "kentico",
+   "name": "Kentico",
+   "type_id": 8
+  },
+  {
+   "id": 71,
+   "alias": "kissmetrics",
+   "name": "Kissmetrics",
+   "type_id": 5
+  },
+  {
+   "id": 51,
+   "alias": "kotlin",
+   "name": "Kotlin",
+   "type_id": 3
+  },
+  {
+   "id": 428,
+   "alias": "kubernetes",
+   "name": "Kubernetes",
+   "type_id": 2
+  },
+  {
+   "id": 32,
+   "alias": "laravel",
+   "name": "Laravel",
+   "type_id": 2
+  },
+  {
+   "id": 400,
+   "alias": "linkedin-salesnavigator",
+   "name": "LinkedIn SalesNavigator",
+   "type_id": 9
+  },
+  {
+   "id": 450,
+   "alias": "lodash",
+   "name": "Lodash",
+   "type_id": 4
+  },
+  {
+   "id": 475,
+   "alias": "looker",
+   "name": "Looker",
+   "type_id": 5
+  },
+  {
+   "id": 476,
+   "alias": "magento",
+   "name": "Magento",
+   "type_id": 2
+  },
+  {
+   "id": 112,
+   "alias": "mailchimp",
+   "name": "MailChimp",
+   "type_id": 10
+  },
+  {
+   "id": 114,
+   "alias": "mailgun",
+   "name": "Mailgun",
+   "type_id": 10
+  },
+  {
+   "id": 115,
+   "alias": "mandrill",
+   "name": "Mandrill",
+   "type_id": 10
+  },
+  {
+   "id": 8,
+   "alias": "mariadb",
+   "name": "MariaDB",
+   "type_id": 1
+  },
+  {
+   "id": 119,
+   "alias": "marketo",
+   "name": "Marketo",
+   "type_id": 11
+  },
+  {
+   "id": 441,
+   "alias": "matlab",
+   "name": "Matlab",
+   "type_id": 3
+  },
+  {
+   "id": 9,
+   "alias": "memcached",
+   "name": "Memcached",
+   "type_id": 1
+  },
+  {
+   "id": 33,
+   "alias": "meteor",
+   "name": "Meteor",
+   "type_id": 2
+  },
+  {
+   "id": 458,
+   "alias": "microsoft-azure",
+   "name": "Microsoft Azure",
+   "type_id": 12
+  },
+  {
+   "id": 104,
+   "alias": "microsoft-dynamics",
+   "name": "Microsoft Dynamics",
+   "type_id": 9
+  },
+  {
+   "id": 90,
+   "alias": "microsoft-project",
+   "name": "Microsoft Project",
+   "type_id": 7
+  },
+  {
+   "id": 10,
+   "alias": "microsoft-sql-server",
+   "name": "Microsoft SQL Server",
+   "type_id": 1
+  },
+  {
+   "id": 465,
+   "alias": "microsoft-teams",
+   "name": "Microsoft Teams",
+   "type_id": 14
+  },
+  {
+   "id": 391,
+   "alias": "miro",
+   "name": "Miro",
+   "type_id": 6
+  },
+  {
+   "id": 72,
+   "alias": "mixpanel",
+   "name": "Mixpanel",
+   "type_id": 5
+  },
+  {
+   "id": 120,
+   "alias": "mixrank",
+   "name": "MixRank",
+   "type_id": 11
+  },
+  {
+   "id": 64,
+   "alias": "modemizr",
+   "name": "Modemizr",
+   "type_id": 4
+  },
+  {
+   "id": 392,
+   "alias": "monday-com",
+   "name": "Monday.com",
+   "type_id": 7
+  },
+  {
+   "id": 359,
+   "alias": "mongodb",
+   "name": "MongoDB",
+   "type_id": 1
+  },
+  {
+   "id": 11,
+   "alias": "mysql",
+   "name": "MySQL",
+   "type_id": 1
+  },
+  {
+   "id": 12,
+   "alias": "neo4j",
+   "name": "Neo4j",
+   "type_id": 1
+  },
+  {
+   "id": 462,
+   "alias": "new-relic",
+   "name": "New Relic",
+   "type_id": 12
+  },
+  {
+   "id": 422,
+   "alias": "next-js",
+   "name": "Next.js",
+   "type_id": 2
+  },
+  {
+   "id": 34,
+   "alias": "node-js",
+   "name": "Node.js",
+   "type_id": 2
+  },
+  {
+   "id": 419,
+   "alias": "nosql",
+   "name": "NoSQL",
+   "type_id": 1
+  },
+  {
+   "id": 425,
+   "alias": "oauth",
+   "name": "OAuth",
+   "type_id": 2
+  },
+  {
+   "id": 444,
+   "alias": "objective-c",
+   "name": "Objective-C",
+   "type_id": 3
+  },
+  {
+   "id": 73,
+   "alias": "optimizely",
+   "name": "Optimizely",
+   "type_id": 5
+  },
+  {
+   "id": 13,
+   "alias": "oracle",
+   "name": "Oracle",
+   "type_id": 1
+  },
+  {
+   "id": 121,
+   "alias": "oracle-eloqua",
+   "name": "Oracle Eloqua",
+   "type_id": 11
+  },
+  {
+   "id": 409,
+   "alias": "outreach",
+   "name": "Outreach",
+   "type_id": 9
+  },
+  {
+   "id": 452,
+   "alias": "pandas",
+   "name": "Pandas",
+   "type_id": 4
+  },
+  {
+   "id": 65,
+   "alias": "parse",
+   "name": "Parse",
+   "type_id": 4
+  },
+  {
+   "id": 52,
+   "alias": "perl",
+   "name": "Perl",
+   "type_id": 3
+  },
+  {
+   "id": 80,
+   "alias": "photoshop",
+   "name": "Photoshop",
+   "type_id": 6
+  },
+  {
+   "id": 53,
+   "alias": "php",
+   "name": "PHP",
+   "type_id": 3
+  },
+  {
+   "id": 105,
+   "alias": "pipedrive",
+   "name": "Pipedrive",
+   "type_id": 9
+  },
+  {
+   "id": 91,
+   "alias": "pivotal-tracker",
+   "name": "Pivotal Tracker",
+   "type_id": 7
+  },
+  {
+   "id": 74,
+   "alias": "piwik",
+   "name": "Piwik",
+   "type_id": 5
+  },
+  {
+   "id": 81,
+   "alias": "pixelmator",
+   "name": "Pixelmator",
+   "type_id": 6
+  },
+  {
+   "id": 35,
+   "alias": "play",
+   "name": "Play",
+   "type_id": 2
+  },
+  {
+   "id": 382,
+   "alias": "playwright",
+   "name": "Playwright",
+   "type_id": 2
+  },
+  {
+   "id": 14,
+   "alias": "postgresql",
+   "name": "PostgreSQL",
+   "type_id": 1
+  },
+  {
+   "id": 54,
+   "alias": "python",
+   "name": "Python",
+   "type_id": 3
+  },
+  {
+   "id": 55,
+   "alias": "r",
+   "name": "R",
+   "type_id": 3
+  },
+  {
+   "id": 122,
+   "alias": "rapportive",
+   "name": "Rapportive",
+   "type_id": 11
+  },
+  {
+   "id": 66,
+   "alias": "react",
+   "name": "React",
+   "type_id": 4
+  },
+  {
+   "id": 435,
+   "alias": "react-native",
+   "name": "React Native",
+   "type_id": 2
+  },
+  {
+   "id": 15,
+   "alias": "redis",
+   "name": "Redis",
+   "type_id": 1
+  },
+  {
+   "id": 67,
+   "alias": "redux",
+   "name": "Redux",
+   "type_id": 4
+  },
+  {
+   "id": 56,
+   "alias": "ruby",
+   "name": "Ruby",
+   "type_id": 3
+  },
+  {
+   "id": 36,
+   "alias": "ruby-rails",
+   "name": "Ruby on Rails",
+   "type_id": 2
+  },
+  {
+   "id": 437,
+   "alias": "rust",
+   "name": "Rust",
+   "type_id": 3
+  },
+  {
+   "id": 451,
+   "alias": "rx-js",
+   "name": "RxJS",
+   "type_id": 4
+  },
+  {
+   "id": 106,
+   "alias": "sage",
+   "name": "Sage",
+   "type_id": 9
+  },
+  {
+   "id": 37,
+   "alias": "sailsjs",
+   "name": "Sails.js",
+   "type_id": 2
+  },
+  {
+   "id": 107,
+   "alias": "salesforce",
+   "name": "Salesforce",
+   "type_id": 9
+  },
+  {
+   "id": 442,
+   "alias": "salesforce-apex",
+   "name": "Salesforce Apex",
+   "type_id": 3
+  },
+  {
+   "id": 402,
+   "alias": "salesforce-cpq",
+   "name": "Salesforce CPQ",
+   "type_id": 9
+  },
+  {
+   "id": 401,
+   "alias": "salesforce-pardot",
+   "name": "Salesforce Pardot",
+   "type_id": 9
+  },
+  {
+   "id": 456,
+   "alias": "sales-loft",
+   "name": "SalesLoft",
+   "type_id": 9
+  },
+  {
+   "id": 16,
+   "alias": "sap-hana",
+   "name": "SAP HANA",
+   "type_id": 1
+  },
+  {
+   "id": 438,
+   "alias": "sass",
+   "name": "Sass",
+   "type_id": 3
+  },
+  {
+   "id": 57,
+   "alias": "scala",
+   "name": "Scala",
+   "type_id": 3
+  },
+  {
+   "id": 433,
+   "alias": "scikit",
+   "name": "Scikit",
+   "type_id": 2
+  },
+  {
+   "id": 116,
+   "alias": "sendgrid",
+   "name": "SendGrid",
+   "type_id": 10
+  },
+  {
+   "id": 463,
+   "alias": "shopify",
+   "name": "Shopify",
+   "type_id": 13
+  },
+  {
+   "id": 455,
+   "alias": "sitecore",
+   "name": "Sitecore",
+   "type_id": 8
+  },
+  {
+   "id": 82,
+   "alias": "sketch",
+   "name": "Sketch",
+   "type_id": 6
+  },
+  {
+   "id": 464,
+   "alias": "slack",
+   "name": "Slack",
+   "type_id": 14
+  },
+  {
+   "id": 92,
+   "alias": "smartsheet",
+   "name": "Smartsheet",
+   "type_id": 7
+  },
+  {
+   "id": 384,
+   "alias": "snowflake",
+   "name": "Snowflake",
+   "type_id": 1
+  },
+  {
+   "id": 445,
+   "alias": "solidity",
+   "name": "Solidity",
+   "type_id": 3
+  },
+  {
+   "id": 83,
+   "alias": "solid-works",
+   "name": "SolidWorks",
+   "type_id": 6
+  },
+  {
+   "id": 38,
+   "alias": "spark",
+   "name": "Spark",
+   "type_id": 2
+  },
+  {
+   "id": 411,
+   "alias": "splash",
+   "name": "Splash",
+   "type_id": 9
+  },
+  {
+   "id": 39,
+   "alias": "spring",
+   "name": "Spring",
+   "type_id": 2
+  },
+  {
+   "id": 406,
+   "alias": "springcm",
+   "name": "SpringCM",
+   "type_id": 9
+  },
+  {
+   "id": 58,
+   "alias": "sql",
+   "name": "SQL",
+   "type_id": 3
+  },
+  {
+   "id": 17,
+   "alias": "sqlite",
+   "name": "SQLite",
+   "type_id": 1
+  },
+  {
+   "id": 59,
+   "alias": "swift",
+   "name": "Swift",
+   "type_id": 3
+  },
+  {
+   "id": 40,
+   "alias": "symfony",
+   "name": "Symfony",
+   "type_id": 2
+  },
+  {
+   "id": 394,
+   "alias": "tableau",
+   "name": "Tableau",
+   "type_id": 5
+  },
+  {
+   "id": 41,
+   "alias": "tensor-flow",
+   "name": "TensorFlow",
+   "type_id": 2
+  },
+  {
+   "id": 18,
+   "alias": "teradata",
+   "name": "Teradata",
+   "type_id": 1
+  },
+  {
+   "id": 424,
+   "alias": "terraform",
+   "name": "Terraform",
+   "type_id": 2
+  },
+  {
+   "id": 42,
+   "alias": "theano",
+   "name": "Theano",
+   "type_id": 2
+  },
+  {
+   "id": 43,
+   "alias": "torch",
+   "name": "Torch",
+   "type_id": 2
+  },
+  {
+   "id": 93,
+   "alias": "trello",
+   "name": "Trello",
+   "type_id": 7
+  },
+  {
+   "id": 408,
+   "alias": "troops",
+   "name": "Troops",
+   "type_id": 9
+  },
+  {
+   "id": 474,
+   "alias": "tuple",
+   "name": "Tuple",
+   "type_id": 7
+  },
+  {
+   "id": 68,
+   "alias": "bootstrap",
+   "name": "Twitter Bootstrap",
+   "type_id": 4
+  },
+  {
+   "id": 387,
+   "alias": "typescript",
+   "name": "TypeScript",
+   "type_id": 3
+  },
+  {
+   "id": 84,
+   "alias": "ux-pin",
+   "name": "UXPin",
+   "type_id": 6
+  },
+  {
+   "id": 388,
+   "alias": "vuejs",
+   "name": "Vue.js",
+   "type_id": 2
+  },
+  {
+   "id": 449,
+   "alias": "vuex",
+   "name": "Vuex",
+   "type_id": 4
+  },
+  {
+   "id": 468,
+   "alias": "webex-meetings",
+   "name": "Webex Meetings",
+   "type_id": 14
+  },
+  {
+   "id": 453,
+   "alias": "webflow",
+   "name": "Webflow",
+   "type_id": 8
+  },
+  {
+   "id": 98,
+   "alias": "wordpress",
+   "name": "Wordpress",
+   "type_id": 8
+  },
+  {
+   "id": 94,
+   "alias": "wrike",
+   "name": "Wrike",
+   "type_id": 7
+  },
+  {
+   "id": 44,
+   "alias": "zend",
+   "name": "Zend",
+   "type_id": 2
+  },
+  {
+   "id": 390,
+   "alias": "zeplin",
+   "name": "Zeplin",
+   "type_id": 6
+  },
+  {
+   "id": 69,
+   "alias": "zepto",
+   "name": "Zepto",
+   "type_id": 4
+  },
+  {
+   "id": 108,
+   "alias": "zoho",
+   "name": "Zoho",
+   "type_id": 9
+  },
+  {
+   "id": 466,
+   "alias": "zoom",
+   "name": "Zoom",
+   "type_id": 14
+  },
+  {
+   "id": 399,
+   "alias": "zoom-info",
+   "name": "ZoomInfo",
+   "type_id": 11
+  }
+ ],
+ "perks": [
+  {
+   "id": 1,
+   "alias": "401k",
+   "name": "Offers 401(K)",
+   "type_id": 13,
+   "is_core": true
+  },
+  {
+   "id": 2,
+   "alias": "401k-matching",
+   "name": "Provides 401(K) matching",
+   "type_id": 13,
+   "is_core": true
+  },
+  {
+   "id": 3,
+   "alias": "adoption-assistance",
+   "name": "Provides adoption assistance",
+   "type_id": 15,
+   "is_core": true
+  },
+  {
+   "id": 6,
+   "alias": "child-care-benefits",
+   "name": "Offers childcare benefits",
+   "type_id": 15,
+   "is_core": true
+  },
+  {
+   "id": 7,
+   "alias": "commuter-benefits",
+   "name": "Provides commuter benefits",
+   "type_id": 10,
+   "is_core": true
+  },
+  {
+   "id": 8,
+   "alias": "company-equity",
+   "name": "Offers company equity",
+   "type_id": 12,
+   "is_core": true
+  },
+  {
+   "id": 9,
+   "alias": "company-sponsored-outings",
+   "name": "Offers company-sponsored outings",
+   "type_id": 17,
+   "is_core": true
+  },
+  {
+   "id": 10,
+   "alias": "company-sponsored-family-events",
+   "name": "Hosts company-sponsored family events",
+   "type_id": 15,
+   "is_core": true
+  },
+  {
+   "id": 11,
+   "alias": "continuing-education-stipend",
+   "name": "Provides continuing education stipend",
+   "type_id": 6,
+   "is_core": true
+  },
+  {
+   "id": 13,
+   "alias": "customized-development-tracks",
+   "name": "Provides customized development tracks",
+   "type_id": 5,
+   "is_core": true
+  },
+  {
+   "id": 16,
+   "alias": "dental-insurance",
+   "name": "Offers dental insurance",
+   "type_id": 14,
+   "is_core": true
+  },
+  {
+   "id": 17,
+   "alias": "disability-insurance",
+   "name": "Offers disability insurance",
+   "type_id": 13,
+   "is_core": true
+  },
+  {
+   "id": 21,
+   "alias": "volunteer-in-local-community",
+   "name": "Provides opportunities to volunteer in the local community",
+   "type_id": 17,
+   "is_core": true
+  },
+  {
+   "id": 22,
+   "alias": "employee-stock-purchase-plan",
+   "name": "Offers employee stock purchase plan",
+   "type_id": 12,
+   "is_core": true
+  },
+  {
+   "id": 23,
+   "alias": "family-medical-leave",
+   "name": "Provides family medical leave",
+   "type_id": 15,
+   "is_core": true
+  },
+  {
+   "id": 24,
+   "alias": "fitness-stipend",
+   "name": "Offers fitness stipend",
+   "type_id": 17,
+   "is_core": true
+  },
+  {
+   "id": 25,
+   "alias": "flexible-spending-account-fsa",
+   "name": "Offers Flexible Spending Account (FSA)",
+   "type_id": 14,
+   "is_core": true
+  },
+  {
+   "id": 26,
+   "alias": "flexible-work-schedule",
+   "name": "Utilizes a flexible work schedule",
+   "type_id": 7,
+   "is_core": true
+  },
+  {
+   "id": 27,
+   "alias": "free-daily-meals",
+   "name": "Provides free daily meals",
+   "type_id": 10,
+   "is_core": true
+  },
+  {
+   "id": 30,
+   "alias": "generous-parental-leave",
+   "name": "Offers generous parental leave",
+   "type_id": 15,
+   "is_core": true
+  },
+  {
+   "id": 31,
+   "alias": "generous-pto",
+   "name": "Offers generous PTO",
+   "type_id": 16,
+   "is_core": true
+  },
+  {
+   "id": 33,
+   "alias": "company-sponsored-happy-hours",
+   "name": "Offers company-sponsored happy hours",
+   "type_id": 17,
+   "is_core": true
+  },
+  {
+   "id": 34,
+   "alias": "health-insurance",
+   "name": "Offers health insurance",
+   "type_id": 14,
+   "is_core": true
+  },
+  {
+   "id": 37,
+   "alias": "job-training-conferences",
+   "name": "Job training & conferences",
+   "type_id": 6,
+   "is_core": true
+  },
+  {
+   "id": 38,
+   "alias": "open-door-policy",
+   "name": "Utilizes an open door policy that encourages accessibility",
+   "type_id": 9,
+   "is_core": true
+  },
+  {
+   "id": 39,
+   "alias": "life-insurance",
+   "name": "Offers life insurance",
+   "type_id": 13,
+   "is_core": true
+  },
+  {
+   "id": 40,
+   "alias": "charitable-contribution-matching",
+   "name": "Offers charitable contribution matching",
+   "type_id": 13,
+   "is_core": true
+  },
+  {
+   "id": 42,
+   "alias": "mentorship-program",
+   "name": "Offers mentorship program",
+   "type_id": 6,
+   "is_core": true
+  },
+  {
+   "id": 43,
+   "alias": "paid-volunteer-time",
+   "name": "Offers paid volunteer time",
+   "type_id": 16,
+   "is_core": true
+  },
+  {
+   "id": 44,
+   "alias": "online-course-subscriptions-available",
+   "name": "Provides online course subscriptions",
+   "type_id": 6,
+   "is_core": true
+  },
+  {
+   "id": 45,
+   "alias": "onsite-gym",
+   "name": "Provides access to an onsite gym",
+   "type_id": 17,
+   "is_core": true
+  },
+  {
+   "id": 46,
+   "alias": "open-office-floor-plan",
+   "name": "Open office floor plan to encourage communication and collaboration",
+   "type_id": 9,
+   "is_core": true
+  },
+  {
+   "id": 47,
+   "alias": "paid-holidays",
+   "name": "Provides paid holidays",
+   "type_id": 16,
+   "is_core": true
+  },
+  {
+   "id": 48,
+   "alias": "paid-industry-certifications",
+   "name": "Provides paid industry certifications",
+   "type_id": 6,
+   "is_core": true
+  },
+  {
+   "id": 49,
+   "alias": "pair-programming",
+   "name": "Engineering team utilizes pair programming",
+   "type_id": 9,
+   "is_core": true
+  },
+  {
+   "id": 50,
+   "alias": "paid-sick-days",
+   "name": "Provides paid sick days",
+   "type_id": 16,
+   "is_core": true
+  },
+  {
+   "id": 51,
+   "alias": "onsite-office-parking",
+   "name": "Provides onsite office parking",
+   "type_id": 10,
+   "is_core": true
+  },
+  {
+   "id": 52,
+   "alias": "partners-with-nonprofits",
+   "name": "Partners with nonprofits",
+   "type_id": 17,
+   "is_core": true
+  },
+  {
+   "id": 53,
+   "alias": "performance-bonus",
+   "name": "Offers performance bonuses",
+   "type_id": 12,
+   "is_core": true
+  },
+  {
+   "id": 54,
+   "alias": "pet-friendly",
+   "name": "Office is pet friendly",
+   "type_id": 10,
+   "is_core": true
+  },
+  {
+   "id": 55,
+   "alias": "pet-insurance",
+   "name": "Offers pet insurance",
+   "type_id": 14,
+   "is_core": true
+  },
+  {
+   "id": 56,
+   "alias": "promote-from-within",
+   "name": "Promote from within",
+   "type_id": 5,
+   "is_core": true
+  },
+  {
+   "id": 57,
+   "alias": "recreational-clubs",
+   "name": "Provides recreational clubs",
+   "type_id": 17,
+   "is_core": true
+  },
+  {
+   "id": 58,
+   "alias": "lunch-and-learns",
+   "name": "Hosts Lunch and Learns",
+   "type_id": 6,
+   "is_core": true
+  },
+  {
+   "id": 59,
+   "alias": "relocation-assistance",
+   "name": "Provides relocation assistance",
+   "type_id": 12,
+   "is_core": true
+  },
+  {
+   "id": 60,
+   "alias": "remote-work-program",
+   "name": "Offers a remote work program",
+   "type_id": 7,
+   "is_core": true
+  },
+  {
+   "id": 61,
+   "alias": "restricted-work-hours",
+   "name": "Utilizes restricted work hours",
+   "type_id": 7,
+   "is_core": true
+  },
+  {
+   "id": 62,
+   "alias": "return-to-work-program-post-parental-leave",
+   "name": "Provides a post-parental leave return-to-work program",
+   "type_id": 15,
+   "is_core": true
+  },
+  {
+   "id": 63,
+   "alias": "sabbatical",
+   "name": "Offers sabbatical leave",
+   "type_id": 16,
+   "is_core": true
+  },
+  {
+   "id": 65,
+   "alias": "free-snacks-and-drinks",
+   "name": "Provides free snacks and drinks",
+   "type_id": 10,
+   "is_core": true
+  },
+  {
+   "id": 66,
+   "alias": "team-based-strategic-planning",
+   "name": "Implements team-based strategic planning",
+   "type_id": 9,
+   "is_core": true
+  },
+  {
+   "id": 67,
+   "alias": "okr-operational-model",
+   "name": "Uses an OKR operational model to clearly define goals and priorities",
+   "type_id": 9,
+   "is_core": true
+  },
+  {
+   "id": 68,
+   "alias": "team-workouts",
+   "name": "Offers team workouts",
+   "type_id": 17,
+   "is_core": true
+  },
+  {
+   "id": 69,
+   "alias": "allows-employees-pursue-continuing-education-during-work-hours",
+   "name": "Allows employees to pursue continuing education during work hours",
+   "type_id": 6,
+   "is_core": true
+  },
+  {
+   "id": 70,
+   "alias": "tuition-reimbursement",
+   "name": "Provides tuition reimbursement",
+   "type_id": 6,
+   "is_core": true
+  },
+  {
+   "id": 72,
+   "alias": "unlimited-pto-policy",
+   "name": "Utilizes an Unlimited PTO policy",
+   "type_id": 16,
+   "is_core": true
+  },
+  {
+   "id": 73,
+   "alias": "vision-insurance",
+   "name": "Offers vision insurance",
+   "type_id": 14,
+   "is_core": true
+  },
+  {
+   "id": 74,
+   "alias": "wellness-programs",
+   "name": "Offers wellness programs",
+   "type_id": 17,
+   "is_core": true
+  },
+  {
+   "id": 76,
+   "alias": "some-meals-provided",
+   "name": "Some meals provided",
+   "type_id": 10,
+   "is_core": true
+  },
+  {
+   "id": 77,
+   "alias": "mental-health-benefits",
+   "name": "Offers mental health benefits",
+   "type_id": 14,
+   "is_core": true
+  },
+  {
+   "id": 78,
+   "alias": "home-office-stipend-for-remote-employees",
+   "name": "Provides home-office stipend for remote employees",
+   "type_id": 12,
+   "is_core": true
+  },
+  {
+   "id": 81,
+   "alias": "full-time-remote-friendly-model",
+   "name": "Utilizes a full-time remote friendly model",
+   "type_id": 7,
+   "is_core": true
+  },
+  {
+   "id": 82,
+   "alias": "allows-work-from-home-occasionally",
+   "name": "Allows work from home occasionally",
+   "type_id": 7,
+   "is_core": true
+  },
+  {
+   "id": 83,
+   "alias": "fertility-benefits",
+   "name": "Provides fertility benefits",
+   "type_id": 15,
+   "is_core": true
+  },
+  {
+   "id": 84,
+   "alias": "4-day-work-week-model",
+   "name": "Utilizes a 4-day work week model",
+   "type_id": 7,
+   "is_core": true
+  },
+  {
+   "id": 85,
+   "alias": "employee-resource-groups",
+   "name": "Offers Employee Resource Groups",
+   "type_id": 17,
+   "is_core": true
+  },
+  {
+   "id": 86,
+   "alias": "employee-led-culture-committees",
+   "name": "Has employee-led culture committees",
+   "type_id": 17,
+   "is_core": true
+  },
+  {
+   "id": 87,
+   "alias": "day-off-for-your-birthday",
+   "name": "Allows employees to take a day off for their birthday",
+   "type_id": 16,
+   "is_core": true
+  },
+  {
+   "id": 88,
+   "alias": "quarterly-engagement-surveys",
+   "name": "Quarterly engagement surveys to gauge employee satisfaction",
+   "type_id": 8,
+   "is_core": true
+  },
+  {
+   "id": 89,
+   "alias": "hybrid-work-model",
+   "name": "Utilizes a hybrid work model",
+   "type_id": 7,
+   "is_core": true
+  },
+  {
+   "id": 90,
+   "alias": "in-person-all-hands-meetings",
+   "name": "Hosts in-person all-hands meetings",
+   "type_id": 9,
+   "is_core": true
+  },
+  {
+   "id": 91,
+   "alias": "in-person-revenue-kickoff",
+   "name": "Hosts in-person revenue kickoff meetings",
+   "type_id": 9,
+   "is_core": true
+  },
+  {
+   "id": 92,
+   "alias": "summer-hours-schedule",
+   "name": "Utilizes a summer hours schedule",
+   "type_id": 7,
+   "is_core": true
+  },
+  {
+   "id": 93,
+   "alias": "presidents-club",
+   "name": "Designated President's Club",
+   "type_id": 12,
+   "is_core": true
+  },
+  {
+   "id": 94,
+   "alias": "established-employee-awards",
+   "name": "Established employee awards to honor work and contributions",
+   "type_id": 8,
+   "is_core": true
+  },
+  {
+   "id": 96,
+   "alias": "pension",
+   "name": "Provides a pension",
+   "type_id": 13,
+   "is_core": true
+  },
+  {
+   "id": 97,
+   "alias": "pay-transparency",
+   "name": "Provides pay transparency",
+   "type_id": 12,
+   "is_core": true
+  },
+  {
+   "id": 98,
+   "alias": "transgender-health-care-benefits",
+   "name": "Offers transgender health care benefits",
+   "type_id": 14,
+   "is_core": true
+  },
+  {
+   "id": 99,
+   "alias": "wellness-days",
+   "name": "Provides wellness days",
+   "type_id": 16,
+   "is_core": true
+  },
+  {
+   "id": 100,
+   "alias": "abortion-travel-benefits",
+   "name": "Offers abortion travel benefits",
+   "type_id": 14,
+   "is_core": true
+  },
+  {
+   "id": 101,
+   "alias": "meditation-space",
+   "name": "Provides onsite meditation space",
+   "type_id": 17,
+   "is_core": true
+  },
+  {
+   "id": 102,
+   "alias": "mothers-room",
+   "name": "Provides an onsite Mother's Room",
+   "type_id": 15,
+   "is_core": true
+  },
+  {
+   "id": 103,
+   "alias": "personal-development-training",
+   "name": "Provides personal development training",
+   "type_id": 6,
+   "is_core": true
+  },
+  {
+   "id": 104,
+   "alias": "virtual-coaching-services",
+   "name": "Provides virtual coaching services",
+   "type_id": 6,
+   "is_core": true
+  },
+  {
+   "id": 105,
+   "alias": "apprenticeship-programs",
+   "name": "Offers apprenticeship programs",
+   "type_id": 6,
+   "is_core": true
+  },
+  {
+   "id": 106,
+   "alias": "flexible-time-off",
+   "name": "Offers a flexible time off policy",
+   "type_id": 16,
+   "is_core": true
+  },
+  {
+   "id": 107,
+   "alias": "floating-holidays",
+   "name": "Provides floating holidays",
+   "type_id": 16,
+   "is_core": true
+  },
+  {
+   "id": 108,
+   "alias": "bereavement-leave",
+   "name": "Provides bereavement leave",
+   "type_id": 16,
+   "is_core": true
+  },
+  {
+   "id": 109,
+   "alias": "hardship-benefits",
+   "name": "Provides hardship benefits",
+   "type_id": 13,
+   "is_core": true
+  },
+  {
+   "id": 110,
+   "alias": "company-wide-vacation",
+   "name": "Utilizes company-wide vacation",
+   "type_id": 16,
+   "is_core": true
+  }
+ ],
+ "diversity": [
+  {
+   "id": 15,
+   "alias": "dedicated-diversity-inclusion-staff",
+   "name": "Has a dedicated diversity and inclusion staff",
+   "type_id": 11
+  },
+  {
+   "id": 18,
+   "alias": "diversity-manifesto",
+   "name": "Has a diversity manifesto",
+   "type_id": 11
+  },
+  {
+   "id": 20,
+   "alias": "documented-equal-pay-policy",
+   "name": "Has a documented equal pay policy",
+   "type_id": 11
+  },
+  {
+   "id": 35,
+   "alias": "highly-diverse-management-team",
+   "name": "Has a highly diverse management team",
+   "type_id": 11
+  },
+  {
+   "id": 41,
+   "alias": "mean-gender-pay-gap-below-10",
+   "name": "Mean gender pay gap is below 10%",
+   "type_id": 11
+  },
+  {
+   "id": 71,
+   "alias": "mandated-unconscious-bias-training",
+   "name": "Mandated unconscious bias training",
+   "type_id": 11
+  },
+  {
+   "id": 79,
+   "alias": "diversity-employee-resource-groups",
+   "name": "Offers diversity-based Employee Resource Groups",
+   "type_id": 11
+  },
+  {
+   "id": 80,
+   "alias": "hiring-practices-that-promote-diversity",
+   "name": "Hiring practices promote diversity",
+   "type_id": 11
+  },
+  {
+   "id": 95,
+   "alias": "diversity-recruitment-program",
+   "name": "Has a diversity recruitment program",
+   "type_id": 11
+  }
+ ],
+ "directory_company_sizes": [
+  {
+   "id": 1,
+   "alias": "1-10",
+   "name": "1 - 10"
+  },
+  {
+   "id": 3,
+   "alias": "11-50",
+   "name": "11 - 50"
+  },
+  {
+   "id": 4,
+   "alias": "51-200",
+   "name": "51 - 200"
+  },
+  {
+   "id": 5,
+   "alias": "201-500",
+   "name": "201 - 500"
+  },
+  {
+   "id": 6,
+   "alias": "501-1000",
+   "name": "501 - 1000"
+  },
+  {
+   "id": 7,
+   "alias": "1000",
+   "name": "1000+"
+  }
+ ]
+}

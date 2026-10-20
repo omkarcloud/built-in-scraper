@@ -1,0 +1,236 @@
+{
+ "id": 84805,
+ "name": "Stripe",
+ "adjectives": [],
+ "alias": "/company/stripe",
+ "city": "",
+ "companyATSDetails": {
+  "atsType": "greenhouse",
+  "atsUrl": "stripe",
+  "atsTracking": "",
+  "atsSourceType": ""
+ },
+ "cultureTopics": [],
+ "elitePageType": null,
+ "email": "",
+ "employeeReviews": [
+  {
+   "reviewerJobTitle": "",
+   "reviewerName": "",
+   "reviewerAvatarURL": "",
+   "review": ""
+  }
+ ],
+ "exitHistory": "",
+ "extraTechnologies": null,
+ "galleries": [],
+ "featuredImage": "",
+ "funding": "[{\"funding_amt\": 0, \"funding_cat\": \"\", \"funding_date\": \"\", \"funding_type\": \"\", \"funding_investors\": \"\", \"funding_target_id\": 0, \"funding_revision_id\": 0}]",
+ "hybridDetails": {
+  "onsiteType": 0,
+  "onsiteValue": 0
+ },
+ "industries": [
+  {
+   "id": 203,
+   "name": "Payments",
+   "urlName": "payments"
+  },
+  {
+   "id": 215,
+   "name": "Software",
+   "urlName": "software"
+  }
+ ],
+ "insidersView": {
+  "intro": "",
+  "introPhotos": {
+   "main": "",
+   "gallery": []
+  },
+  "fourOneOne": [
+   {
+    "question": "",
+    "answer": ""
+   },
+   {
+    "question": "",
+    "answer": ""
+   },
+   {
+    "question": "",
+    "answer": ""
+   },
+   {
+    "question": "",
+    "answer": ""
+   }
+  ]
+ },
+ "introHeader": "",
+ "isBrandBoost": false,
+ "isEasyApply": false,
+ "isCustomQuestions": false,
+ "isLimitedListings": true,
+ "lastUpdated": "2026-08-27 16:38:41 +0000 UTC",
+ "localEmployees": 0,
+ "logo": "https://builtin.com/sites/www.builtin.com/files/2021-10/stripe.jpeg",
+ "logoUrl": "https://builtin.com/sites/www.builtin.com/files/2021-10/stripe.jpeg",
+ "marketSites": [
+  {
+   "regionID": 9,
+   "companyID": 319012
+  }
+ ],
+ "metaTags": null,
+ "miniDescription": "",
+ "mission": "Stripe is a technology company that builds economic infrastructure for the internet. Businesses of every size\u2014from new startups to public companies like Salesforce and Facebook\u2014use the company\u2019s software to accept online payments and run technically sophisticated financial operations in more than 100 countries. Stripe helps new companies get started and grow their revenues, and established businesses accelerate into new markets and launch new business models. Over the long term, Stripe aims to increase the GDP of the internet.",
+ "offices": [
+  {
+   "city": "San Francisco",
+   "country": "US",
+   "headquarters": true,
+   "nearestMarket": 8,
+   "neighborhoodDescription": "",
+   "postalCode": "94103",
+   "state": "CA",
+   "streetAddress1": "510 Townsend St",
+   "streetAddress2": ""
+  },
+  {
+   "city": "Seattle",
+   "country": "US",
+   "headquarters": false,
+   "nearestMarket": 7,
+   "neighborhoodDescription": "",
+   "postalCode": "98104",
+   "state": "WA",
+   "streetAddress1": "920 5th Ave",
+   "streetAddress2": ""
+  },
+  {
+   "city": "Chicago",
+   "country": "US",
+   "headquarters": false,
+   "nearestMarket": 1,
+   "neighborhoodDescription": "",
+   "postalCode": "60610",
+   "state": "IL",
+   "streetAddress1": "515 N State St",
+   "streetAddress2": ""
+  },
+  {
+   "city": "New York",
+   "country": "US",
+   "headquarters": false,
+   "nearestMarket": 5,
+   "neighborhoodDescription": "",
+   "postalCode": "10301",
+   "state": "NY",
+   "streetAddress1": "11 Park Pl",
+   "streetAddress2": ""
+  },
+  {
+   "city": "Dublin",
+   "country": "IE",
+   "headquarters": false,
+   "nearestMarket": 0,
+   "neighborhoodDescription": "",
+   "postalCode": "",
+   "state": "Dublin",
+   "streetAddress1": "Grand Canal Street Lower",
+   "streetAddress2": ""
+  },
+  {
+   "city": "Bengaluru",
+   "country": "IN",
+   "headquarters": false,
+   "nearestMarket": 0,
+   "neighborhoodDescription": "",
+   "postalCode": "560103",
+   "state": "Karnataka",
+   "streetAddress1": "Prestige Tech Pacific, Kaverappa Layout, Kadubeesanahalli",
+   "streetAddress2": ""
+  },
+  {
+   "city": "Melbourne, ",
+   "country": "AU",
+   "headquarters": false,
+   "nearestMarket": 0,
+   "neighborhoodDescription": "",
+   "postalCode": "3000",
+   "state": "Victoria ",
+   "streetAddress1": "222 Exhibition St",
+   "streetAddress2": ""
+  },
+  {
+   "city": "London",
+   "country": "GB",
+   "headquarters": false,
+   "nearestMarket": 0,
+   "neighborhoodDescription": "",
+   "postalCode": "EC1V 9NR",
+   "state": "",
+   "streetAddress1": "211 Old Street, , England ",
+   "streetAddress2": ""
+  },
+  {
+   "city": "Chicago",
+   "country": "US",
+   "headquarters": false,
+   "nearestMarket": 0,
+   "neighborhoodDescription": "",
+   "postalCode": "60610",
+   "state": "Illinois ",
+   "streetAddress1": "515 N State St,",
+   "streetAddress2": ""
+  }
+ ],
+ "officeType": 1,
+ "perks": null,
+ "perksCount": 33,
+ "perksOverview": "",
+ "publishInsidersPage": false,
+ "regionAlias": "national",
+ "regionName": "Nationwide",
+ "salesforceID": "0011a00000Iwk1sAAB",
+ "showFunding": true,
+ "state": "",
+ "subscription": {
+  "level": "BASIC"
+ },
+ "technologies": null,
+ "totalEmployees": 5360,
+ "url": "https://builtin.com/company/stripe",
+ "video": "",
+ "whyWorkWithUs": "",
+ "workplacePolicy": "",
+ "yearFounded": 2010,
+ "jobs": {
+  "categories": [],
+  "count": 0
+ },
+ "hasRemoteJobs": true,
+ "jobDetails": [
+  {
+   "id": 4823468,
+   "title": "Product Marketing Manager",
+   "categoryID": 14,
+   "location": "",
+   "originalLocation": "United States",
+   "experienceLevel": "7+",
+   "url": "/job/product-marketing-manager/3502210",
+   "remoteStatus": "REMOTE_ENABLED",
+   "regionID": 9,
+   "body": "<p><b>Who we are</b><b>About Stripe</b>\n</p><p>Stripe is a financial infrastructure platform for businesses. Millions of companies\u2014from the world\u2019s largest enterprises to the most ambitious startups\u2014use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the GDP of the internet, and we have a staggering amount of work ahead. That means you have an unprecedented opportunity to put the global economy within everyone\u2019s reach while doing the most important work of your career.</p>\n<p><b>About the team</b>\n</p><p>Our Product Marketing team\u2019s mission is to generate customer insights that inform Stripe\u2019s product strategy, and lead go-to-market for our suite of products. Product Marketing is a highly cross-functional role at Stripe, partnering closely with Product and Engineering, Sales, Partnerships, Demand Generation and Campaigns to name a few. Different from many other Product Marketing teams, our team works across the entire product lifecycle, from helping shape the product, to driving launch and commercialization, to growing product adoption post-launch.&nbsp;&nbsp;</p>\n<p>We are looking for experienced product marketers to shape the roadmap, drive launches, and grow adoption for critical products such as Payments Intelligence, Payouts, Tax, Billing, and Link; and develop our go-to-market strategy for key user segments such as Enterprises and Startups. In this role, you will develop messaging and positioning, craft the narrative for how our products deliver value to customers, and engage teams across sales, campaigns, demand generation, and product to drive overall awareness, pipeline, and revenue across Stripe\u2019s existing customer base and prospects.</p>\n<p><b><strong>What you\u2019ll do</strong></b>\n</p><ul>\n<li><strong>Be a storyteller. </strong>You have deep empathy for users and are able to adapt how you communicate to best reach and engage your audience and differentiate Stripe. You have excellent verbal and written communication skills</li>\n<li><strong>Lead with data. </strong>You like working with data and insights and pair that with your passion for users to generate balanced and thoughtful points of view for how to take our products to market</li>\n<li><strong>Keep things organized. </strong>You are able to manage highly interdependent, complex projects and keep various work streams on track</li>\n<li><strong>Have a passion for technology. </strong>You are keen to learn about how things work and are able to explain technical concepts in ways that everyday people can understand</li>\n<li><strong>Be Ambitious. </strong>You are eager to make an impact at Stripe. You thrive in a fast-moving, dynamic, hyper-growth environment and are able to operate fluidly between the 30,000-foot strategy level and the micro-detail to get things right</li>\n<li><strong>Act as a team player. </strong>Product Marketers collaborate across the Marketing team and with basically every team at Stripe. You are able to work with a range of disciplines to execute on your work</li>\n</ul>\n<p><b>Responsibilities</b>\n</p><ul>\n<li>Develop messaging and positioning for Stripe products or user segments. Develop campaign-level content as well as sales enablement assets</li>\n<li>Work closely with product, partnerships, and partner marketing (demand generation) teams to build a marketing strategy, with the goal of driving awareness, demand, and usage of our products</li>\n<li>Enable sales teams to understand the value of our products and competitive solutions</li>\n</ul>\n<p><b><strong>Who you are</strong></b>\n</p><p>We\u2019re looking for someone who meets the minimum requirements to be considered for the role. If you meet these requirements, you are encouraged to apply.&nbsp;</p>\n<p><b>Minimum requirements</b>\n</p><ul>\n<li>7+ years prior product marketing experience&nbsp;</li>\n<li>Excellent verbal and written communication skills, with experience translating technical features into benefits for a technical audience</li>\n<li>Be able to leverage data to proactively identify opportunities and drive impactful results</li>\n</ul>\n",
+   "bodySummary": "",
+   "howToApply": "https://stripe.com/jobs/search?gh_jid=6348471",
+   "sortJob": "2026-07-31T00:17:20Z",
+   "geoLocations": [],
+   "targetedRemoteLocations": [],
+   "isHybrid": false,
+   "isEasyApply": false
+  }
+ ],
+ "easyApplyCategories": []
+}

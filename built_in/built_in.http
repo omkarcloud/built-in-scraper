@@ -1,0 +1,59 @@
+### Built In (builtin.com) — /built-in/* request examples (VS Code REST Client)
+### Run locally:  ONLY_SCRAPER=built-in python run.py   (port 6002)
+@host = http://127.0.0.1:6002
+
+### Jobs — search with every filter (work mode, metro, category/subcategory, experience, posted within)
+GET {{host}}/built-in/jobs/search?query=python&location=chicago&work_mode=remote,hybrid&category=engineering&subcategory=software-engineering&experience=senior&posted_within=30d&page=1
+
+### Jobs — any place name (resolved through the site's own location lookup) + radius
+GET {{host}}/built-in/jobs/search?query=data%20scientist&location=Austin,%20TX&radius_miles=25
+
+### Jobs — another country board (ISO alpha-2; results are geo-defaulted by IP upstream, so the API always sends one)
+GET {{host}}/built-in/jobs/search?query=python&country=GB
+
+### Jobs — a builtin.com board link as the query (its own filters are applied)
+GET {{host}}/built-in/jobs/search?query=https://builtin.com/jobs/remote/chicago/engineering?search=python
+
+### Jobs — industry + company size + early-applicant + skills
+GET {{host}}/built-in/jobs/search?industry=fintech&company_size=51-200&early_applicant=true&skills=python,sql
+
+### Jobs — one job in full (a job link or '{title-slug}/{job_id}'; the site cannot open a job by id alone)
+GET {{host}}/built-in/jobs/details?job=https://builtin.com/job/data-scientist-intern-2027-summer-u-s/11345450
+
+### Jobs — the filter vocabularies (categories + subcategories, industries, metros, experience levels …)
+GET {{host}}/built-in/jobs/filters
+
+### Companies — name search
+GET {{host}}/built-in/companies/search?query=stripe
+
+### Companies — one company in full (alias, profile link or numeric id; include= limits the tab fetches)
+GET {{host}}/built-in/companies/details?company=atlassian
+GET {{host}}/built-in/companies/details?company=84805&include=offices
+
+### Companies — the directory with its path filters
+GET {{host}}/built-in/companies/list?location=chicago&industry=fintech&company_size=51-200
+GET {{host}}/built-in/companies/list?hiring_remote=true&perk=401k&tech=python
+
+### Companies — directory filter vocabularies (metros, perks, tech stacks, diversity, insight topics)
+GET {{host}}/built-in/companies/filters
+
+### Companies — the AI "insights" pages
+GET {{host}}/built-in/companies/insights?company=stripe&topic=compensation_benefits
+
+### Companies — a company's articles and live jobs
+GET {{host}}/built-in/companies/articles?company=stripe&per_page=5
+GET {{host}}/built-in/companies/jobs?company=atlassian&work_mode=remote&page=2
+
+### Salaries — one title nationally or in a metro; a metro overview; the explorer's lists
+GET {{host}}/built-in/salaries/title?title=Software%20Engineer&location=Chicago,%20IL
+GET {{host}}/built-in/salaries/title?title=product-manager
+GET {{host}}/built-in/salaries/location?location=new-york-city-ny
+GET {{host}}/built-in/salaries/filters
+
+### Articles
+GET {{host}}/built-in/articles/details?article=https://builtin.com/articles/yext-acquires-hearsay-systems-20240613
+GET {{host}}/built-in/articles/latest?per_page=10
+
+### Lookups
+GET {{host}}/built-in/locations/suggest?query=chic&resolve=true
+GET {{host}}/built-in/job-titles/suggest?query=data
