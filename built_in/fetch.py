@@ -38,10 +38,13 @@ Upstream surfaces:
   * LOOKUPS: https://api.builtin.com/locationapi/suggest/autocomplete,
       /locationapi/place?placeId=, /jobsapi/jobtitles?searchTerm=
 
-Blocks: none seen. Defensive handling only — a 403 / 429 or a Cloudflare
-challenge page sends the worker's new sessions through a sticky residential
-US exit (config.built_in_fallback_proxy()) for config.BUILT_IN_BLOCK_COOLDOWN
-seconds, the same shape as the reed / vinted transports.
+Egress: the hosted service sends every session through a sticky
+residential US exit (config.built_in_proxy(); config.BUILT_IN_REQUIRE_PROXY
+turns a missing proxy into an error — never the server's own IP). A retry
+opens a new session on a fresh exit. Blocks: none seen. The open-source
+copy runs direct by default; there a 403 / 429 or a Cloudflare challenge
+moves new sessions to config.built_in_fallback_proxy() (if set) for
+config.BUILT_IN_BLOCK_COOLDOWN seconds.
 
 Failure taxonomy (scraper_errors, mapped to HTTP by route_glue):
   BuiltInUpstreamError  transport failure / 5xx            — retryable
@@ -112,9 +115,16 @@ _fallback_lock = threading.Lock()
 
 
 def _proxy_for_new_session():
+    """The proxy for a new session. With config.BUILT_IN_REQUIRE_PROXY (the
+    hosted service) a missing proxy is an error — builtin.com is never
+    contacted from the server's own IP. Without it (the open-source kit) a
+    session goes direct unless BUILT_IN_PROXY is set, and moves to
+    BUILT_IN_FALLBACK_PROXY for a while after a block."""
     forced = config.built_in_proxy()
     if forced:
         return forced
+    if getattr(config, "BUILT_IN_REQUIRE_PROXY", False):
+        raise BuiltInUpstreamError("no Built In proxy configured (builtin.com is never contacted from the server's IP)")
     if time.time() < _fallback_until:
         return config.built_in_fallback_proxy()
     return None
@@ -124,8 +134,8 @@ def _session():
     sess = getattr(_local, "session", None)
     if sess is None:
         from curl_cffi import requests as curl_requests
-        sess = curl_requests.Session(impersonate=IMPERSONATE)
         proxy = _proxy_for_new_session()
+        sess = curl_requests.Session(impersonate=IMPERSONATE)
         if proxy:
             sess.proxies = {"http": proxy, "https": proxy}
         _local.session = sess
