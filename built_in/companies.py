@@ -115,6 +115,11 @@ def details(company, include=None):
     profile_init = embedded_init(header_html, "companyProfileInit") or {}
     overview = P.company_overview(got.get("overview")) if got.get("overview") else {}
     benefits = P.benefits_tab(got["benefits"]) if got.get("benefits") else None
+    if benefits is not None:
+        # the tab's intro is the GraphQL perksOverview again: keep one copy
+        tab_overview = benefits.pop("overview", None)
+        if not core.get("perks_overview"):
+            core["perks_overview"] = tab_overview
     offices = P.offices_tab(got["offices"]) if got.get("offices") else None
     teams = P.teams_tab(got["teams"]) if got.get("teams") else None
     out = dict(core)

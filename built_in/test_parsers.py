@@ -168,6 +168,7 @@ def test_job_page():
     assert job["company"]["hq"] == "San Francisco, CA" and job["company"]["employees_count"] == 11000 and job["company"]["year_founded"] == 2012
     assert job["company"]["what_we_do"] and job["company"]["why_work_with_us"] and len(job["company"]["gallery"]) == 10
     assert job["company"]["teams"][0]["name"] == "Product + Tech" and job["company"]["workplace"]["type"] == "Remote Workspace"
+    assert job["company"]["workplace"]["time_onsite"] == "None"
     assert any(o["is_headquarters"] for o in job["company"]["offices"])
     assert job["employment_type"] == "INTERN" and job["valid_through"] == "2026-11-18T08:17:58Z"
     assert job["salary"] == {"min": 39, "max": 53, "period": "hourly", "currency": "USD", "text": "39-53 Hourly"}
@@ -325,3 +326,18 @@ def test_job_page_never_borrows_from_similar_jobs():
                      init=fetch.embedded_init(html, "jobPostInit"), ld=fetch.ld_node(html, "JobPosting"))
     assert job["company"]["name"] == "JPMorganChase" and job["salary"] is None
     assert job["location"] == "Plano, TX, USA" and job["work_mode_text"] == "Hybrid"
+
+
+def test_file_links_and_insider_highlights():
+    assert P.file_link("public://office_culture/Atlassian Profile - 2.jpg") == \
+        "https://builtin.com/sites/www.builtin.com/files/office_culture/Atlassian%20Profile%20-%202.jpg"
+    assert P.file_link("2026-08/x.jpg") == "https://builtin.com/sites/www.builtin.com/files/2026-08/x.jpg"
+    assert P.file_link("") is None
+    node = dict(fx("graphql_company"))
+    node["insidersView"] = {"intro": "Hi", "introPhotos": {"main": "public://a b.jpg", "gallery": []},
+                            "fourOneOne": [{"question": "people-focused-perks", "answer": None},
+                                           {"question": "We fund back-up child care for everyone.", "answer": "Peace of Mind"}]}
+    company = P.graphql_company(node)
+    assert company["insiders"]["main_photo"].endswith("/files/a%20b.jpg")
+    assert company["insiders"]["highlights"] == [{"title": "Peace of Mind", "text": "We fund back-up child care for everyone."}]
+    assert "source_type" not in company["ats"]

@@ -582,7 +582,7 @@ def _company_block(doc):
         if section is not None:
             paragraphs = [node_text(p) for p in section.find_all("p", recursive=False)]
             paragraphs = [p for p in paragraphs if p]
-            onsite = re.search(r"Typical time on-site:\s*([^|]+)", section.get_text(" | ", strip=True))
+            onsite = re.search(r"Typical time on-site:\s*\|?\s*([^|]+)", section.get_text(" | ", strip=True))
             out["workplace"] = {
                 "type": paragraphs[0] if paragraphs else None,
                 "summary": paragraphs[1] if len(paragraphs) > 1 else None,
@@ -1131,6 +1131,24 @@ def directory_criteria(init):
 # ---- api.builtin.com ---------------------------------------------------------------
 
 OFFICE_TYPES = {1: "on_site", 2: "hybrid", 3: "remote"}
+FILES = "https://builtin.com/sites/www.builtin.com/files/"
+
+
+def file_link(value):
+    """A Drupal file reference ('public://2021-10/stripe.jpeg', a bare
+    '2026-08/x.jpg' or a full link) -> an absolute https link."""
+    value = text(value)
+    if not value:
+        return None
+    if value.startswith("public://"):
+        link = FILES + value[len("public://"):].lstrip("/")
+    elif value.startswith("s3://prod-company-images.builtin.com/"):
+        link = "https://static.builtin.com/" + value[len("s3://prod-company-images.builtin.com/"):]
+    elif value.startswith(("http://", "https://", "//", "/")):
+        link = refs.absolute(value)
+    else:
+        link = FILES + value.lstrip("/")
+    return link.replace(" ", "%20")
 
 
 def _funding(raw):
@@ -1169,7 +1187,7 @@ def graphql_company(node):
     extra = [{"id": to_int(t.get("id")), "name": text(t.get("name")), "category": text(t.get("categoryName"))}
              for t in (c.get("extraTechnologies") or []) if isinstance(t, dict) and text(t.get("name"))]
     reviews = [{"reviewer_name": text(r.get("reviewerName")), "reviewer_title": text(r.get("reviewerJobTitle")),
-                "reviewer_photo": refs.absolute(r.get("reviewerAvatarURL")) if text(r.get("reviewerAvatarURL")) else None,
+                "reviewer_photo": file_link(r.get("reviewerAvatarURL")),
                 "text": text(r.get("review"))}
                for r in (c.get("employeeReviews") or []) if isinstance(r, dict) and text(r.get("review"))]
     culture = []
@@ -1181,10 +1199,19 @@ def graphql_company(node):
                         "quote_question": text(t.get("quoteQuestion")), "quote_name": text(t.get("quoteName")),
                         "quote_title": text(t.get("quoteTitle")), "featured_name": text(t.get("featuredName")),
                         "featured_title": text(t.get("featuredTitle")),
-                        "images": [refs.absolute(f.get("uri")) for f in (t.get("fileData") or []) if isinstance(f, dict) and text(f.get("uri"))]})
+                        "images": [file_link(f.get("uri")) for f in (t.get("fileData") or []) if isinstance(f, dict) and text(f.get("uri"))]})
     insiders = c.get("insidersView") if isinstance(c.get("insidersView"), dict) else {}
-    qa = [{"question": text(q.get("question")), "answer": text(q.get("answer"))}
-          for q in (insiders.get("fourOneOne") or []) if isinstance(q, dict) and (text(q.get("question")) or text(q.get("answer")))]
+    # insidersView.fourOneOne keeps the heading in `answer` and the body in
+    # `question`; unfilled entries are bare slugs ("people-focused-perks")
+    qa = []
+    for q in insiders.get("fourOneOne") or []:
+        if not isinstance(q, dict):
+            continue
+        body, heading = text(q.get("question")), text(q.get("answer"))
+        if body and " " not in body and not heading:
+            continue
+        if body or heading:
+            qa.append({"title": heading, "text": body})
     photos = insiders.get("introPhotos") if isinstance(insiders.get("introPhotos"), dict) else {}
     hybrid = c.get("hybridDetails") if isinstance(c.get("hybridDetails"), dict) else {}
     ats = c.get("companyATSDetails") if isinstance(c.get("companyATSDetails"), dict) else {}
@@ -1194,8 +1221,8 @@ def graphql_company(node):
         "name": text(c.get("name")),
         "alias": alias,
         "link": refs.company_link(alias),
-        "logo": refs.absolute(c.get("logoUrl") or c.get("logo")) if text(c.get("logoUrl") or c.get("logo")) else None,
-        "featured_image": refs.absolute(c.get("featuredImage")) if text(c.get("featuredImage")) else None,
+        "logo": file_link(c.get("logoUrl") or c.get("logo")),
+        "featured_image": file_link(c.get("featuredImage")),
         "video": text(c.get("video")),
         "mission": text(c.get("mission")),
         "mini_description": text(c.get("miniDescription")),
@@ -1219,14 +1246,13 @@ def graphql_company(node):
         "extra_technologies": extra,
         "culture_topics": culture,
         "employee_reviews": reviews,
-        "insiders": {"intro": text(insiders.get("intro")), "main_photo": refs.absolute(photos.get("main")) if text(photos.get("main")) else None,
-                     "gallery": [refs.absolute(g) for g in (photos.get("gallery") or []) if text(g)], "questions": qa}
+        "insiders": {"intro": text(insiders.get("intro")), "main_photo": file_link(photos.get("main")),
+                     "gallery": [file_link(g) for g in (photos.get("gallery") or []) if text(g)], "highlights": qa}
                     if (text(insiders.get("intro")) or qa) else None,
-        "galleries": [refs.absolute(g) for g in (c.get("galleries") or []) if text(g)],
+        "galleries": [file_link(g) for g in (c.get("galleries") or []) if text(g)],
         "funding": _funding(c.get("funding")) if c.get("showFunding", True) else [],
         "exit_history": text(c.get("exitHistory")),
-        "ats": {"type": text(ats.get("atsType")), "link_or_token": text(ats.get("atsUrl")), "source_type": text(ats.get("atsSourceType"))}
-               if text(ats.get("atsType")) else None,
+        "ats": {"type": text(ats.get("atsType")), "link_or_token": text(ats.get("atsUrl"))} if text(ats.get("atsType")) else None,
         "is_easy_apply": bool(c.get("isEasyApply")),
         "is_brand_boost": bool(c.get("isBrandBoost")),
         "is_limited_listings": bool(c.get("isLimitedListings")),
@@ -1242,11 +1268,8 @@ def graphql_company(node):
 def company_search_row(row):
     r = row if isinstance(row, dict) else {}
     alias = refs.company_alias_from_path(r.get("alias"))
-    logo = r.get("logo")
-    if isinstance(logo, str) and logo.startswith("public://"):
-        logo = "https://builtin.com/sites/www.builtin.com/files/" + logo[len("public://"):]
     return {"id": to_int(r.get("id")), "name": text(r.get("title")), "alias": alias, "link": refs.company_link(alias),
-            "logo": refs.absolute(logo) if text(logo) else None,
+            "logo": file_link(r.get("logo")),
             "industries": [i for i in (text(x) for x in re.split(r",\s*", r.get("industries") or "")) if i]}
 
 
@@ -1277,19 +1300,6 @@ def article_card(row, ld=None):
         "updated_at": iso_from_ld(ld.get("dateModified")) or iso_from_ld(r.get("updatedAt")),
         "image": refs.absolute(image) if isinstance(image, str) and image.strip() else None,
     }
-
-
-def graphql_article(row):
-    r = row if isinstance(row, dict) else {}
-    slug = (r.get("alias") or "").rstrip("/").rsplit("/", 1)[-1] or None
-    thumb = r.get("thumbnail")
-    if isinstance(thumb, str) and thumb and not thumb.startswith("http"):
-        thumb = "https://builtin.com/sites/www.builtin.com/files/" + thumb.lstrip("/")
-    body = r.get("body") if isinstance(r.get("body"), str) else None
-    return {"id": to_int(r.get("id")), "title": text(r.get("title")), "slug": slug, "link": refs.article_link(slug),
-            "subtitle": text(r.get("subtitle")), "teaser": text(r.get("teaser")), "thumbnail": refs.absolute(thumb) if text(thumb) else None,
-            "is_spotlight": bool(r.get("isSpotlight")), "body_html": body, "body_text": strip_html(body),
-            "company_ids": [to_int(c.get("companyId")) for c in (r.get("companies") or []) if isinstance(c, dict) and to_int(c.get("companyId"))]}
 
 
 def place_suggestion(row):
