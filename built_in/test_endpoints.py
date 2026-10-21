@@ -88,6 +88,8 @@ def test_companies_search_and_details():
     assert atlassian["id"] == 81667 and atlassian["teams"] and any(o["is_headquarters"] for o in atlassian["office_locations"])
     hubspot = call("/built-in/companies/details", company="hubspot")["company"]
     assert hubspot["name"] == "HubSpot"     # its hasRemoteJobs field 500s server-side; the rest must still come through
+    newer = call("/built-in/companies/details", company="openai-deployment-company")["company"]
+    assert newer["id"] == 284263 and newer["website"]   # unknown to the GraphQL: built from its pages alone
     by_id = call("/built-in/companies/details", company="84805", include="offices")["company"]
     assert by_id["alias"] == "stripe" and by_id["benefits"] is None and by_id["office_locations"]
     by_link = call("/built-in/companies/details", company="https://builtin.com/company/stripe/jobs")["company"]

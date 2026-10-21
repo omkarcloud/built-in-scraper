@@ -53,20 +53,36 @@ def _graphql_company(company):
     node = (data or {}).get("companyByID")
     if not isinstance(node, dict) or not node.get("id"):
         message = "; ".join(e.get("message", "") for e in errors[:2]) if errors else ""
-        if node is None and errors and not any("no rows" in (e.get("message") or "").lower() for e in errors):
+        missing = any(m in (e.get("message") or "").lower() for e in errors for m in ("no rows", "not found"))
+        if node is None and errors and not missing:
             raise BuiltInUpstreamError(f"company lookup failed: {message[:200]}")
         raise BuiltInNotFound(f"company {company.get('alias') or company_id} not found on builtin.com")
     return node
 
 
+def _page_company_id(alias):
+    """The company id the profile page embeds (companyProfileInit), or None
+    when builtin.com has no such page."""
+    status, html, _ = get_page(f"/company/{alias}", label="company profile")
+    if status != 200:
+        return None
+    init = embedded_init(html, "companyProfileInit") or {}
+    return P.to_int(init.get("companyId"))
+
+
 def company_id_for_alias(alias):
-    """'stripe' -> 84805 (one GraphQL lookup)."""
+    """'stripe' -> 84805: one GraphQL lookup on the national market; companies
+    the GraphQL does not know (newer profiles, other markets) fall back to the
+    id their own profile page embeds."""
     data, _ = graphql("query($name:String!,$r:Int!){ companyByAliasAndRegionID(name:$name, regionId:$r){ id } }",
                       {"name": alias, "r": SITE_ID}, label="company id")
     node = (data or {}).get("companyByAliasAndRegionID")
-    if not isinstance(node, dict) or not node.get("id"):
-        raise BuiltInNotFound(f"company '{alias}' not found on builtin.com")
-    return int(node["id"])
+    if isinstance(node, dict) and node.get("id"):
+        return int(node["id"])
+    page_id = _page_company_id(alias)
+    if page_id:
+        return page_id
+    raise BuiltInNotFound(f"company '{alias}' not found on builtin.com")
 
 
 def search(query, limit=10):
@@ -90,8 +106,23 @@ def _has_remote_jobs(company_id):
 
 
 def details(company, include=None):
-    """GraphQL core + profile header + the Benefits / Offices / Teams tabs."""
-    core = P.graphql_company(_graphql_company(company))
+    """GraphQL core + profile header + the Benefits / Offices / Teams tabs.
+    A company the GraphQL has no record of (newer profiles, e.g.
+    openai-deployment-company) is built from its pages alone: the GraphQL-only
+    fields stay null and the header / tabs fill the rest."""
+    try:
+        core = P.graphql_company(_graphql_company(company))
+    except BuiltInNotFound:
+        if not company.get("alias"):
+            raise
+        core = None
+    if core is None:
+        status, html, _ = get_page(f"/company/{company['alias']}", label="company profile")
+        init = embedded_init(html, "companyProfileInit") if status == 200 else None
+        if not init:
+            raise BuiltInNotFound(f"company {company['alias']} not found on builtin.com")
+        core = P.graphql_company({"id": init.get("companyId"), "name": init.get("companyName"),
+                                  "alias": "/company/" + (init.get("companyAlias") or company["alias"])})
     alias = core["alias"] or company.get("alias")
     if not alias:
         raise BuiltInNotFound("company has no public profile alias")
