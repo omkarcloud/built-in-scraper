@@ -1,50 +1,13 @@
-"""Value helpers for the Built In normalizers (kept local so the package
-stands alone, like the other site packages)."""
+"""Value helpers for the Built In normalizers (the generic ones come from
+scraper_utils; the rest are the site's own)."""
 import html as html_lib
 import re
+from scraper_utils.values import bool_or_none, num as to_float, number, to_int
+from scraper_utils.text import clean as text
 
 _TAG_RE = re.compile(r"<[^>]+>")
 _WS_RE = re.compile(r"\s+")
 _NUMBER_RE = re.compile(r"-?\d[\d,]*(?:\.\d+)?")
-
-
-def to_int(value):
-    try:
-        return int(value) if value not in (None, "") and not isinstance(value, bool) else None
-    except (TypeError, ValueError):
-        try:
-            return int(float(str(value).replace(",", "")))
-        except (TypeError, ValueError):
-            return None
-
-
-def to_float(value):
-    if value in (None, "") or isinstance(value, bool):
-        return None
-    try:
-        number = float(str(value).replace(",", "")) if isinstance(value, str) else float(value)
-    except (TypeError, ValueError):
-        return None
-    return number if number == number else None
-
-
-def number(value):
-    """A float that is whole -> int (salaries, prices)."""
-    out = to_float(value)
-    if out is None:
-        return None
-    return int(out) if out.is_integer() else out
-
-
-def text(value):
-    if not isinstance(value, str):
-        return None
-    value = _WS_RE.sub(" ", html_lib.unescape(value)).strip()
-    return value or None
-
-
-def bool_or_none(value):
-    return value if isinstance(value, bool) else None
 
 
 def strip_html(value):

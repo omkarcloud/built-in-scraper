@@ -53,6 +53,7 @@ Deliberately dropped as noise:
 """
 import html as html_lib
 import json
+import fastjson
 import re
 from datetime import datetime, timedelta, timezone
 from urllib.parse import parse_qsl, urlparse
@@ -1153,7 +1154,7 @@ def file_link(value):
 
 def _funding(raw):
     try:
-        rows = json.loads(raw) if isinstance(raw, str) and raw.strip() else (raw if isinstance(raw, list) else [])
+        rows = fastjson.loads(raw) if isinstance(raw, str) and raw.strip() else (raw if isinstance(raw, list) else [])
     except json.JSONDecodeError:
         return []
     out = []

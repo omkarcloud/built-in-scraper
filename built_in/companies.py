@@ -116,13 +116,17 @@ def details(company, include=None):
         if not company.get("alias"):
             raise
         core = None
-    if core is None:
+    page_only = core is None
+    if page_only:
         status, html, _ = get_page(f"/company/{company['alias']}", label="company profile")
         init = embedded_init(html, "companyProfileInit") if status == 200 else None
         if not init:
             raise BuiltInNotFound(f"company {company['alias']} not found on builtin.com")
         core = P.graphql_company({"id": init.get("companyId"), "name": init.get("companyName"),
                                   "alias": "/company/" + (init.get("companyAlias") or company["alias"])})
+        # GraphQL-only flags are unknown here, not false
+        for key in ("is_easy_apply", "is_brand_boost", "is_limited_listings", "has_insiders_page"):
+            core[key] = None
     alias = core["alias"] or company.get("alias")
     if not alias:
         raise BuiltInNotFound("company has no public profile alias")
@@ -130,8 +134,9 @@ def details(company, include=None):
     fetches = {
         "header": lambda: get_page(f"/company/{alias}", label="company profile"),
         "overview": lambda: _tab(alias, None),
-        "has_remote_jobs": lambda: _has_remote_jobs(core["id"]),
     }
+    if not page_only:   # the GraphQL has no record of a page-only company (and its id may be missing)
+        fetches["has_remote_jobs"] = lambda: _has_remote_jobs(core["id"])
     if "benefits" in include:
         fetches["benefits"] = lambda: _tab(alias, "benefits")
     if "offices" in include:

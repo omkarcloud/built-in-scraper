@@ -38,12 +38,16 @@ Upstream surfaces:
   * LOOKUPS: https://api.builtin.com/locationapi/suggest/autocomplete,
       /locationapi/place?placeId=, /jobsapi/jobtitles?searchTerm=
 
-Egress: the hosted service sends every session through a sticky
-residential US exit (config.built_in_proxy(); config.BUILT_IN_REQUIRE_PROXY
-turns a missing proxy into an error — never the server's own IP). A retry
-opens a new session on a fresh exit. Blocks: none seen. The open-source
-copy runs direct by default; there a 403 / 429 or a Cloudflare challenge
-moves new sessions to config.built_in_fallback_proxy() (if set) for
+Egress: the hosted service sends every session through the shared gateway exit
+ since 2026-11-11 (config.BUILT_IN_EXIT = "gateway", exit_gateway.py: a
+fresh gateway address on nearly every request; the numbers are in config.py's
+Built In block) and the LAST retry of a call through a sticky residential
+US exit, the exit every session rode before (config.built_in_proxy();
+config.BUILT_IN_REQUIRE_PROXY turns a missing exit into an error — never
+the server's own IP). A retry opens a new session on a fresh exit. Blocks:
+none seen. The open-source copy runs direct by default; there a 403 / 429
+or a Cloudflare challenge moves new sessions to
+config.built_in_fallback_proxy() (if set) for
 config.BUILT_IN_BLOCK_COOLDOWN seconds.
 
 Failure taxonomy (scraper_errors, mapped to HTTP by route_glue):
@@ -53,6 +57,7 @@ Failure taxonomy (scraper_errors, mapped to HTTP by route_glue):
   BuiltInNotFound       404 / missing entity               — never retried
 """
 import json
+import fastjson
 import os
 import re
 import sys
@@ -63,7 +68,9 @@ from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import config
+import egress
 from scraper_errors import BadRequest, Blocked, NotFound, UpstreamError
+from scraper_utils import debug, fanout, sessions
 
 SITE = "https://builtin.com"
 API = "https://api.builtin.com"
@@ -75,12 +82,12 @@ FANOUT_WORKERS = 12
 
 PAGE_HEADERS = {
     "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "accept-language": "en-US,en;q=0.9",
+    "accept-language": egress.site_accept_language("built-in"),
     "upgrade-insecure-requests": "1",
 }
 JSON_HEADERS = {
     "accept": "application/json, text/plain, */*",
-    "accept-language": "en-US,en;q=0.9",
+    "accept-language": egress.site_accept_language("built-in"),
     "origin": SITE,
     "referer": SITE + "/",
 }
@@ -107,8 +114,9 @@ class BuiltInNotFound(NotFound):
 
 
 # ---- sessions ------------------------------------------------------------------
-# One curl session per worker thread. Direct egress by default; after a block
-# the thread's new sessions go through a sticky residential exit for a while.
+# One session per worker thread (egress.new_session: curl_cffi, or the gateway
+# exit's look-alike). Direct egress by default; after a block the
+# thread's new sessions go through a sticky residential exit for a while.
 _local = threading.local()
 _fallback_until = 0.0
 _fallback_lock = threading.Lock()
@@ -120,7 +128,7 @@ def _proxy_for_new_session():
     contacted from the server's own IP. Without it (the open-source kit) a
     session goes direct unless BUILT_IN_PROXY is set, and moves to
     BUILT_IN_FALLBACK_PROXY for a while after a block."""
-    forced = config.built_in_proxy()
+    forced = config.built_in_proxy(fallback=getattr(_local, "fallback", False))
     if forced:
         return forced
     if getattr(config, "BUILT_IN_REQUIRE_PROXY", False):
@@ -133,23 +141,14 @@ def _proxy_for_new_session():
 def _session():
     sess = getattr(_local, "session", None)
     if sess is None:
-        from curl_cffi import requests as curl_requests
-        proxy = _proxy_for_new_session()
-        sess = curl_requests.Session(impersonate=IMPERSONATE)
-        if proxy:
-            sess.proxies = {"http": proxy, "https": proxy}
+        # None, a proxy URL, or the gateway exit ("gateway")
+        sess = egress.new_session(_proxy_for_new_session(), impersonate=IMPERSONATE)
         _local.session = sess
     return sess
 
 
 def _drop_session():
-    sess = getattr(_local, "session", None)
-    _local.session = None
-    if sess is not None:
-        try:
-            sess.close()
-        except Exception:
-            pass
+    sessions.drop(_local)
 
 
 def _note_block():
@@ -160,29 +159,34 @@ def _note_block():
 
 
 def dump_debug(name, text):
-    dbg = os.environ.get("BUILT_IN_DEBUG_DIR", "")
-    if dbg and text:
-        try:
-            os.makedirs(dbg, exist_ok=True)
-            with open(os.path.join(dbg, name + ".txt"), "w", encoding="utf-8") as f:
-                f.write(text)
-        except OSError:
-            pass
+    debug.dump("BUILT_IN_DEBUG_DIR", name, text, encoding="utf-8")
 
 
 # ---- requests --------------------------------------------------------------------
 
 def _retrying(fn):
+    """Run fn() under the shared retry policy, each retry on a fresh session
+    / exit. The LAST retry rides config.built_in_proxy(fallback=True) (the
+    residential exit), so a call the gateway exit keeps failing still gets
+    one try on the exit every call rode before 2026-11-11."""
     last = None
-    for attempt in range(1, config.MAX_RETRIES + 1):
-        try:
-            return fn()
-        except BuiltInUpstreamError as e:          # includes BuiltInBlocked
-            last = e
-            _drop_session()
-        if attempt < config.MAX_RETRIES:
-            time.sleep(config.RETRY_BACKOFF * attempt)
-    raise last
+    try:
+        for attempt in range(1, config.MAX_RETRIES + 1):
+            try:
+                return fn()
+            except BuiltInUpstreamError as e:          # includes BuiltInBlocked
+                last = e
+                _drop_session()
+            if attempt < config.MAX_RETRIES:
+                _local.fallback = attempt + 1 == config.MAX_RETRIES     # the session _session() builds next
+                if config.gateway_exit(config.BUILT_IN_EXIT):     # how often the gateway fails is the number to watch
+                    print(f"built-in: attempt {attempt}/{config.MAX_RETRIES} failed: {last}")
+                time.sleep(config.RETRY_BACKOFF * attempt)
+        raise last
+    finally:
+        if getattr(_local, "fallback", False):
+            _local.fallback = False
+            _drop_session()         # the next call starts on the configured exit again
 
 
 def clean_params(params):
@@ -366,7 +370,7 @@ def embedded_init(html, name):
     if raw is None:
         return None
     try:
-        return json.loads(raw)
+        return fastjson.loads(raw)
     except json.JSONDecodeError:
         return None
 
@@ -376,7 +380,7 @@ def json_ld(html):
     out = []
     for match in _LD_RE.finditer(html or ""):
         try:
-            doc = json.loads(match.group(1))
+            doc = fastjson.loads(match.group(1))
         except json.JSONDecodeError:
             continue
         nodes = doc if isinstance(doc, list) else [doc]
@@ -403,34 +407,14 @@ _pool = ThreadPoolExecutor(max_workers=FANOUT_WORKERS, thread_name_prefix="built
 
 
 def run_parallel(fns):
-    if not fns:
-        return []
-    if len(fns) == 1:
-        return [fns[0]()]
-    futures = [_pool.submit(fn) for fn in fns]
-    return [f.result() for f in futures]
+    return fanout.on_pool(_pool, fns)
 
 
 def gather(mapping, optional=()):
     """{key: callable} in parallel -> {key: result}. Keys named in
     `optional` yield None instead of failing the set when they raise any
     scraper error (an enrichment must not sink the endpoint)."""
-    keys = list(mapping)
-
-    def guarded(key):
-        fn = mapping[key]
-        if key not in optional:
-            return fn
-
-        def run():
-            try:
-                return fn()
-            except (UpstreamError, BadRequest, NotFound):
-                return None
-        return run
-
-    results = run_parallel([guarded(k) for k in keys])
-    return dict(zip(keys, results))
+    return fanout.gather_optional(run_parallel, mapping, optional, (UpstreamError, BadRequest, NotFound))
 
 
 if __name__ == "__main__":

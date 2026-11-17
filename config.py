@@ -25,7 +25,7 @@ RETRY_BACKOFF = 2          # seconds, multiplied by the attempt number
 BUILT_IN_BLOCK_COOLDOWN = 900
 
 
-def built_in_proxy():
+def built_in_proxy(*args, **kwargs):
     """Proxy for every session (None = direct)."""
     return os.environ.get("BUILT_IN_PROXY") or None
 
@@ -33,3 +33,10 @@ def built_in_proxy():
 def built_in_fallback_proxy():
     """Proxy for sessions opened after a block (None = no fallback)."""
     return os.environ.get("BUILT_IN_FALLBACK_PROXY") or None
+
+
+# ---- added by the sync: defaults for a direct run ----
+BUILT_IN_EXIT = None
+def gateway_exit(exit=None):
+    return None
+

@@ -13,6 +13,7 @@ from marshmallow import ValidationError
 
 from built_in import fetch, parsers as P, refdata, refs, schemas
 from built_in.jobs import search_path, upstream_params
+from scraper_utils.testing import hosted_only
 
 FIX = os.path.join(os.path.dirname(__file__), "fixtures")
 
@@ -75,12 +76,12 @@ def test_resolve_article():
 
 def test_parse_search_link():
     link = refs.parse_search_link("https://builtin.com/jobs/remote/hybrid/chicago/engineering/software-engineering/senior/fintech/51-200"
-                                  "?search=python&daysSinceUpdated=7&companyId=84805&skills=aws,sql&page=2&searcharea=25mi")
+                                  "?search=python&daysSinceUpdated=7&companyId=84805&skills=gateway,sql&page=2&searcharea=25mi")
     assert link["work_modes"] == ["remote", "hybrid"] and link["location"] == "chicago"
     assert link["category"] == "engineering" and link["subcategory"] == "software-engineering"
     assert link["experience"] == "senior" and link["industry"] == "fintech" and link["company_size"] == "51-200"
     assert link["query"] == "python" and link["posted_within"] == "7d" and link["company_id"] == 84805
-    assert link["skills"] == ["aws", "sql"] and link["page"] == 2 and link["radius_miles"] == 25
+    assert link["skills"] == ["gateway", "sql"] and link["page"] == 2 and link["radius_miles"] == 25
     legacy = refs.parse_search_link("https://builtin.com/jobs/eu/germany/dev-engineering/search/python")
     assert legacy["country"] == "DEU" and legacy["query"] == "python" and legacy["extra_segments"] == ["dev-engineering"]
     with pytest.raises(ValueError):
@@ -120,7 +121,7 @@ def test_job_search_schema():
 def test_search_path_and_params():
     kw = {"query": "python", "location": "chicago", "work_mode": ["remote", "hybrid"], "category": "engineering",
           "subcategory": "software-engineering", "experience": "senior", "industry": "fintech", "company_size": "51-200",
-          "posted_within": "7d", "skills": ["aws"], "radius_miles": 25, "early_applicant": True, "page": 2, "country": "USA"}
+          "posted_within": "7d", "skills": ["gateway"], "radius_miles": 25, "early_applicant": True, "page": 2, "country": "USA"}
     path, metro = search_path(kw)
     assert path == "/jobs/remote/hybrid/chicago/engineering/software-engineering/senior/fintech/51-200"
     params = upstream_params(kw, metro, None, None)
@@ -341,3 +342,31 @@ def test_file_links_and_insider_highlights():
     assert company["insiders"]["main_photo"].endswith("/files/a%20b.jpg")
     assert company["insiders"]["highlights"] == [{"title": "Peace of Mind", "text": "We fund back-up child care for everyone."}]
     assert "source_type" not in company["ats"]
+
+
+# ---- egress: the gateway exit first, the residential exit on the last retry -------------
+
+@hosted_only
+def test_last_retry_rides_the_residential_exit(monkeypatch):
+    import config
+    monkeypatch.setattr(config, "BUILT_IN_EXIT", "gateway")
+    monkeypatch.setattr(config, "RETRY_BACKOFF", 0)
+    monkeypatch.setattr(config, "residential_proxy", lambda country, states=None: f"http://resi-{country}:1")
+    assert config.built_in_proxy() == "gateway" and config.built_in_proxy(fallback=True) == "http://resi-us:1"
+    exits = []
+    monkeypatch.setattr(fetch.egress, "new_session", lambda exit, impersonate=None: exits.append(exit) or type("S", (), {"close": lambda self: None})())
+    fetch._drop_session()
+
+    def failing():
+        fetch._session()
+        raise fetch.BuiltInBlocked("HTTP 403")
+
+    with pytest.raises(fetch.BuiltInBlocked):
+        fetch._retrying(failing)
+    assert exits == ["gateway"] * (config.MAX_RETRIES - 1) + ["http://resi-us:1"]
+    # the next call starts on the gateway again, and a call that succeeds never leaves it
+    assert fetch._retrying(lambda: fetch._session() and "ok") == "ok" and exits[-1] == "gateway"
+    fetch._drop_session()
+    # the knob off: every session on the residential exit, as before 2026-11-11
+    monkeypatch.setattr(config, "BUILT_IN_EXIT", None)
+    assert config.built_in_proxy() == "http://resi-us:1"
